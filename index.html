@@ -40,15 +40,14 @@
       
     <canvas id="canvas"></canvas>
 
-    <script>
-
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-
-    //ctx.fillStyle = 'green';
-    //ctx.fillRect(10, 10, 150, 100);
-      
-    rectMode(CENTER);
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
+        
+        // ProgramCodeGoesHere
+        rectMode(CENTER);
 var r = 0;
 var x = 40;
 var y = 200;
@@ -73,11 +72,17 @@ When desighning a phycics simulation we must ask ourselvse questions; questions 
     -Whar are the parts of the stoping force
     
 The part of the forward force is: speed
+
 The parts of the upward force are: angle, and speed
+
 The parts of the backward force are: wind, size, and weight
+
 The parts of the downward force are: weigt, gravity
+
 The parts of the stoping force are: weghit, size, and drag
+
 we must also ask ourselvse what the parts of speed, and drag are:
+
     -speed is made by exceleration, and efected by drag
     
     -drag is efected by size, weigt, gravity, and air
@@ -207,9 +212,15 @@ draw = function() {
     text("Hight:", 5, 40, 100, 20);
     text("width:", 5, 60, 100, 20);
     
-  };
+    };
 
-    </script>
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
 
     </body>
 
