@@ -11,14 +11,16 @@
     <h1>"HI"</h1>
     <p>"Hello W3!"</p>
 
-        <canvas>
-            width="500" hight="300" id="canvas"
-        </canvas>
+    <canvas width="500" height="300" id="canvas"></canvas>
+    //<canvas width="500" height="300" id="canvas">The browser doesn't support the canvas element</canvas>
 
     <script>
-        const canvas = document.querySelect("#canvas");
-        const width = canvas.width;
-        const hight = canvas.hight;
+        const canvas = document.querySelector('#canvas');
+        const width = canvas.width;// 500
+        const height = canvas.height;// 300
+
+        canvas.width = 600;
+        canvas.height = 400;
 
         let canvas = document.querySelector("#canvas");
         let ctx = main.getContext("2d");
