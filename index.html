@@ -86,7 +86,7 @@ var exceleration = 5;
 var drag = 5;
 var speed = exceleration;
 
-var ball = function(/*ballX, ballY*/)   {
+ctx.var ball = function(/*ballX, ballY*/)   {
     
     var ballX = 40;
     var ballY = 200;
@@ -94,7 +94,7 @@ var ball = function(/*ballX, ballY*/)   {
     
 };
 
-draw = function() {
+ctx.draw = function() {
     
     background(255, 255, 255);
     fill(255, 255, 255);
@@ -106,7 +106,7 @@ draw = function() {
     fill(0, 0, 0);
     text("LOADE", 123, 330, 50, 20);
     
-    if (mouseX > 98 && mouseX < 190 && mouseY > 305 && mouseY < 377)   {
+    ctx.if (mouseX > 98 && mouseX < 190 && mouseY > 305 && mouseY < 377)   {
             
             if (mouseIsPressed)   {
                 
@@ -129,11 +129,11 @@ draw = function() {
     popMatrix();
     
     fill(255, 0, 0);
-    rect(250, 340, 95, 70);
+    ctx.rect(250, 340, 95, 70);
     fill(0, 0, 0);
-    text("LAUNCH", 209, 330, 70, 20);
+    ctx.text("LAUNCH", 209, 330, 70, 20);
     
-    if(mouseX > 200 && mouseX < 300 && mouseY > 305 && mouseY < 377)    {
+    ctx.if(mouseX > 200 && mouseX < 300 && mouseY > 305 && mouseY < 377)    {
         
         if (mouseIsPressed)  {
             
