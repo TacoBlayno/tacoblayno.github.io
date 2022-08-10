@@ -20,7 +20,7 @@
 
     <body>
         
-    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+    //<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
 
     <header>TacoBlayno's Website</header>
     <h1>The Cannon Game</h1>
@@ -159,7 +159,7 @@ draw = function() {
         
         if (mouseX > 310 && mouseX < 380 && mouseY > 305 && mouseY < 337)   {
             
-            if (mouseIsPressed)   {
+            if (mousePressed)   {
                 
                 r = r - 0.5;
                 
@@ -169,7 +169,7 @@ draw = function() {
         
         if (mouseX > 310 && mouseX < 380 && mouseY > 345 && mouseY < 377)   {
             
-            if (mouseIsPressed)   {
+            if (mousePressed)   {
                 
                 r = r + 0.5;
                 
@@ -178,15 +178,15 @@ draw = function() {
         }
         
         
-        if (keyIsPressed && keyCode === UP)   {
+        if (keyPressed && keyCode === UP)   {
             r = r - 0.5;
         }
         
-        if (keyIsPressed && keyCode === DOWN)   {
+        if (keyPressed && keyCode === DOWN)   {
             r = r + 0.5;
         }
         
-        if (keyIsPressed && key.code === 32)    {
+        if (keyPressed && key.code === 32)    {
             launch = true;
         }
     
