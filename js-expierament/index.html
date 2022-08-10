@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>tacoblayno's cannon game</title>
+
+    <style>
+
+        header{
+          background-color: rgb(255, 100, 250);
+          border-color: rgb(255, 0, 200);
+          font-style: curcive, italic;
+          font-size: 50px;
+        }
+
+    </style>
+
+    <body>
+        
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+
+    <header>TacoBlayno's Website</header>
+    <h1>"The Cannon Game"</h1>
+      
+    <p>""</p>
+      
+      <ul>
+        <li><a href="https://tacoblayno.github.io/js-expierament/">Link to JavaScript Expierament</a></li>
+      </ul>
+      
+    <canvas id="mycanvas"></canvas>
+
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
+        
+        // ProgramCodeGoesHere
+        rectMode(CENTER);
+var r = 0;
+var x = 40;
+var y = 200;
+
+
+var launch = false;
+
+var ballX = 40;
+var ballY = 200;
+
+
+/*
+When desighning a phycics simulation we must ask ourselvse questions; questions of the parts of physics:
+    -What is the part of the forward force
+    
+    -What are the parts of the upward force
+    
+    -What are the parts of the backward force
+    
+    -What are the parts of the downward force
+    
+    -Whar are the parts of the stoping force
+    
+The part of the forward force is: speed
+The parts of the upward force are: angle, and speed
+The parts of the backward force are: wind, size, and weight
+The parts of the downward force are: weigt, gravity
+The parts of the stoping force are: weghit, size, and drag
+we must also ask ourselvse what the parts of speed, and drag are:
+    -speed is made by exceleration, and efected by drag
+    
+    -drag is efected by size, weigt, gravity, and air
+*/
+
+var gravity;
+//var volume;
+//var weight = 0.5;
+var exceleration = 5;
+var drag = 5;
+var speed = exceleration;
+
+var ball = function(/*ballX, ballY*/)   {
+    
+    var ballX = 40;
+    var ballY = 200;
+    ellipse(ballX, ballY, 20, 20);
+    
+};
+
+draw = function() {
+    
+    background(255, 255, 255);
+    fill(255, 255, 255);
+    
+    ball(ballX, ballY);
+    
+    fill(255, 255, 0);
+    rect(150, 340, 70, 70);
+    fill(0, 0, 0);
+    text("LOADE", 123, 330, 50, 20);
+    
+    if (mouseX > 98 && mouseX < 190 && mouseY > 305 && mouseY < 377)   {
+            
+            if (mouseIsPressed)   {
+                
+                new ball(ballX, ballY);
+                
+            }
+            
+        }
+    
+    fill(200, 200, 200);
+    
+    pushMatrix();
+    
+    r = constrain(r, -60, 60);
+    
+    translate(x, y);
+    rotate(r);
+    rect(0, 0, 40, 30);
+    
+    popMatrix();
+    
+    fill(255, 0, 0);
+    rect(250, 340, 95, 70);
+    fill(0, 0, 0);
+    text("LAUNCH", 209, 330, 70, 20);
+    
+    if(mouseX > 200 && mouseX < 300 && mouseY > 305 && mouseY < 377)    {
+        
+        if (mouseIsPressed)  {
+            
+            launch = true;
+            
+        }
+        
+    }
+    
+    if (launch === true)  {
+        
+        ballX = ballX + speed;
+        ballY = ballY + (r*40/360)/5*speed;
+        
+    }
+    
+    fill(0, 255, 0);
+    rect(345, 320, 70, 30);
+    rect(345, 360, 70, 30);
+    fill(0, 0, 0);
+    textSize(20);
+    text("UP", 331, 313, 20, 20);
+    textSize(20);
+    text("DOWN", 313, 353, 60, 20);
+    
+        
+        
+        if (mouseX > 310 && mouseX < 380 && mouseY > 305 && mouseY < 337)   {
+            
+            if (mouseIsPressed)   {
+                
+                r = r - 0.5;
+                
+            }
+            
+        }
+        
+        if (mouseX > 310 && mouseX < 380 && mouseY > 345 && mouseY < 377)   {
+            
+            if (mouseIsPressed)   {
+                
+                r = r + 0.5;
+                
+            }
+            
+        }
+        
+        
+        if (keyIsPressed && keyCode === UP)   {
+            r = r - 0.5;
+        }
+        
+        if (keyIsPressed && keyCode === DOWN)   {
+            r = r + 0.5;
+        }
+        
+        if (keyIsPressed && key.code === 32)    {
+            launch = true;
+        }
+    
+    var ballD = ballX + ballY;
+    
+    text(r*-1, 70, 20, 320, 20);
+    text(ballY * -1 + 200, 70, 40, 320, 20);
+    text(ballX - 40, 70, 60, 320, 20);
+    text("angle:", 5, 20, 100, 20);
+    text("Hight:", 5, 40, 100, 20);
+    text("width:", 5, 60, 100, 20);
+    
+    };
+
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+    </body>
+
+  </head>
+</html>
