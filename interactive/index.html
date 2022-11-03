@@ -57,19 +57,26 @@ class Shape {
  //
  //my code
  //
+  var ellipseX = 10
   draw = () => {
-    // this is where we control the shape's appearance
-    var ellipseX = 10
-    c.fill(0, 0, 0)
-    c.ellipse(ellipseX, 10, 10, 10);
-    c.ellipseX ++;
-    this.update
+    c.strokeStyle = 'rgba(255, 255, 255)';
+    c.fillStyle = 'rgba(255, 255, 255)';
+    c.beginPath();
+    c.arc(this.x, this.y, 1, 0, Math.PI * 2, false);
+    c.fill();
+    c.moveTo(this.x, this.y);
+    c.lineTo(this.x + 300, this.y - 1000);
+    c.stroke();
+    c.closePath();
+    this.update();
   };
   update = () => {
     // this is where we control movement and interactivity
-    this.draw();
+    c.ellipseX ++;
     if (ellipseX < 40)  {
       c.ellipseX = 0;
+    }
+    this.draw();
     }
   };
 };
