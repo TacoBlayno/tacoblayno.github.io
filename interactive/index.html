@@ -56,6 +56,12 @@ class Shape {
   };
   draw = () => {
     // this is where we control the shape's appearance
+    let ellipseX = 10
+    ellipse(ellipseX, 10, 10, 10);
+    ellipseX ++;
+    if (ellipseX < 40)  {
+      ellipseX = 0;
+    }
   };
   update = () => {
     // this is where we control movement and interactivity
