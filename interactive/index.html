@@ -54,9 +54,14 @@ class Shape {
     this.initialX = x;
     this.initialY = y;
   };
+ 
+ //
+ //my code
+ //
   draw = () => {
     // this is where we control the shape's appearance
     let ellipseX = 10
+    fill(0, 0, 0)
     ellipse(ellipseX, 10, 10, 10);
     ellipseX ++;
     if (ellipseX < 40)  {
