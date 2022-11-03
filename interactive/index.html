@@ -61,11 +61,11 @@ class Shape {
   draw = () => {
     // this is where we control the shape's appearance
     let ellipseX = 10
-    fill(0, 0, 0)
-    ellipse(ellipseX, 10, 10, 10);
-    ellipseX ++;
+    c.fill(0, 0, 0)
+    c.ellipse(ellipseX, 10, 10, 10);
+    c.ellipseX ++;
     if (ellipseX < 40)  {
-      ellipseX = 0;
+      c.ellipseX = 0;
     }
   };
   update = () => {
