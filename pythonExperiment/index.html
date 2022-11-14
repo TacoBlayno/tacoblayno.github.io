@@ -11,15 +11,15 @@
             print("This is an expeiment with &$60py-script>")
 
             def userInput():
-            statements = []
-            while True:
-                confirmContinue = input("Would you like to type a sentance? (Yes, or no): ")[0].lower()
-                if confirmContinue == "n":
-                    return statements
-                else:
-                    pass
-                statements += input("Type a senance: ")
-                statements += " "
+                statements = []
+                while True:
+                    confirmContinue = input("Would you like to type a sentance? (Yes, or no): ")[0].lower()
+                    if confirmContinue == "n":
+                        return statements
+                    else:
+                        pass
+                    statements += input("Type a senance: ")
+                    statements += " "
         
             statements = userInput()
 
