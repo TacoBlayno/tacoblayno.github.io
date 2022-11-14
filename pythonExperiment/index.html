@@ -8,6 +8,22 @@
     <body>
         <py-script>
             print("Hello")
+            print("This is an expeiment with &$60py-script>")
+            
+            def userInput():
+                statements = []
+                while True:
+                    confirmContinue = input("Would you like to type a sentance? (Yes, or no): ")[0].lower()
+                    if confirmContinue == "n" and sentances in statements > 0:
+                        return statements
+                    elif confirmContinue == "n":
+                        return
+                    else:
+                        pass
+                    statements += input("Type a senance: ")
+            userInput()
+            for sentances in range(len(statements)):
+                print(statements[setntances])
         </py-script>
    </body>
 </html>
