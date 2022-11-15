@@ -1,174 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>PONG in JS</title>
-    <style type="text/css">
-          body {margin:0; padding:0;} /* remove top and left whitespace */
-          *{
-            margin: 0;
-            padding: 0 }
-            canvas {display:block;}    /* remove scrollbars */
-            canvas:focus {outline:0;} /* remove blue outline around canvas */
-            .fs {position:fixed; bottom:20px; right:20px;}
-            #enter {display:block;}
-            #exit {display:none;}
-        </style>  
-</head>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="resources/libs/processing.js"></script>
+    </head>
 
-<body>
-      <canvas id="pongcanvas"></canvas> 
+    <body>
+        <div id="sketchContainer">
+            <!-- Works if I uncomment this!
+            <canvas data-processing-sources="js/header_sketches/my_awesome_sketch.js"></canvas>
+            -->
+        </div>
 
+        <script>
+            var scrElt = document.createElement("script");
+            scrElt.type = "text/javascript";
+            scrElt.src = "resources/libs/processing.js";
+            scrElt.async = false;
 
-<script src="processing.min.js"></script> 
-<script>    
-
-var sketchProc = function(processingInstance) {
-    with (processingInstance) {
-        size(window.innerWidth, window.innerHeight);
-        frameRate(60);
-
-        //SETUP         
-        var screenWidth=window.innerWidth;
-        var screenHeight=window.innerHeight;
-
-        //Paddle Vars
-        var paddleX = mouseX;
-        var basePaddleWidth = 50;
-        var paddleWidth = basePaddleWidth;
-
-        //Ball Vars
-        var ballWidth = 10;
-        var ballX = screenWidth/2;
-        var ballY = screenHeight/2;
-        var targetBallSpeedX = 1;
-        var targetBallSpeedY = 1;
-        var ballSpeedX = targetBallSpeedX;
-        var ballSpeedY = targetBallSpeedY;
-        var ballXDistanceFromPaddle = (paddleX - ballX);
-        var ballXSpeedIncrement = 1;
-
-        //Enemy Paddle Vars
-        var enemyPaddleX = screenWidth/2;
-        var enemyBasePaddleWidth = 50;
-        var enemyPaddleWidth = enemyBasePaddleWidth;
-        var enemyPaddleSpeedLimitX = 1;
-        var enemyPaddleSpeedX = 1;
-        var enemyPaddleDistanceToBall = enemyPaddleX - ballX;
-
-        //Game Vars
-        var restartTimer = 5000;
-        var restartCount = 0;
-        var score = 0;
-        var highScore = 0;
-
-        var getImage = function(s) {
-            var url = "http://www.wacomalt.com/dropbox/LABS/JSCODE/data/" + s + ".png";
-            processing.externals.sketch.imageCache.add(url);
-            return processing.loadImage(url);
-        };
-
-        var goodPaddleImage = getImage("goodpaddle");
-
-        var restart = function() {
-          ballX = screenWidth/2;
-          ballY = screenHeight/2;
-          enemyPaddleSpeedLimitX = 1;
-          ballSpeedX = 1;
-          ballSpeedY = 1;
-        };
-
-        var restartPlus = function() {
-            ballX = screenWidth/2;
-            ballY = screenHeight/2;
-            enemyPaddleSpeedLimitX = enemyPaddleSpeedLimitX + 0.0625;
-            score++;
-            ballSpeedY = -ballSpeedY;
+            scrElt.onload = function() {
+                var canvas = document.createElement("canvas");
+                canvas.setAttribute("data-processing-sources", "js/header_sketches/my_awesome_sketch.js");
+                document.getElementById("sketchContainer").appendChild(canvas);
             };
 
-        var draw = function() {
-            paddleX = mouseX;
-
-            //Background
-            fill(42, 80, 145, 80);
-            rect(-1, -1, screenWidth+1, screenHeight+1);
-            stroke(127,127,127);
-            fill(173, 173, 173);
-            rect(0,0,screenWidth-1,40);
-
-            //Score display
-            fill(0, 0, 0);
-            textSize(20);
-            text("Score: " + score,5,5,200,20);
-            text("High Score: " + highScore,223,5,310,20);
-
-            //Draw Paddle
-            fill(123, 255, 0);
-            stroke(0,0,0);
-            rect(paddleX-(paddleWidth/2),screenHeight-20,paddleWidth,10);
-            image(goodPaddleImage ,paddleX-25,screenHeight-20, 50, 10);
-
-            //Draw Enemy Paddle
-            fill(255, 0, 0);
-            stroke(0,0,0);
-            rect(enemyPaddleX-(enemyPaddleWidth/2),40,enemyPaddleWidth,10);
-
-            //Draw Ball
-            stroke(184, 37, 0);
-            fill(255, 140, 0);
-            ellipse(ballX, ballY, ballWidth, ballWidth);
-
-            ballXDistanceFromPaddle = (paddleX - ballX);
-            enemyPaddleDistanceToBall = (enemyPaddleX - ballX);
-
-            if (ballX > screenWidth-5) {
-                ballSpeedX = -ballSpeedX;
-            }
-            if (ballX < 5) {
-                ballSpeedX = (ballSpeedX * -1);
-            }
-            if (ballY > screenHeight-25) {
-                if (abs(ballXDistanceFromPaddle) < ((paddleWidth/2)+ballWidth)){
-                    ballSpeedY = ((ballSpeedY * -1) - 0.125);
-                    enemyPaddleSpeedLimitX = enemyPaddleSpeedLimitX + 0.0625;
-                    ballXSpeedIncrement = ballXSpeedIncrement + 0.02;
-                    ballSpeedX = (ballXDistanceFromPaddle / -12.5) * ballXSpeedIncrement;
-                }
-                else {
-                    if (score > 0){score = 0;}
-                    restart();
-                            }
-            }
-            if (ballY < 55) {
-                if (abs(enemyPaddleDistanceToBall) < ((enemyPaddleWidth/2)+ballWidth)){
-                    ballSpeedY = ((ballSpeedY * -1) + 0.125);
-                    enemyPaddleSpeedLimitX = enemyPaddleSpeedLimitX + 0.0625;
-                    ballXSpeedIncrement = ballXSpeedIncrement + 0.02;
-                    ballSpeedX = (enemyPaddleDistanceToBall / -12.5) * ballXSpeedIncrement;
-                }
-                else {
-                    restartPlus();
-                }
-
-            }
-
-            if (score > highScore) {highScore = score;}
-
-            ballX = ballX + ballSpeedX;
-            ballY = ballY + ballSpeedY;
-            enemyPaddleSpeedX = enemyPaddleDistanceToBall;
-            if (enemyPaddleSpeedX > enemyPaddleSpeedLimitX) {
-                enemyPaddleSpeedX = enemyPaddleSpeedLimitX;
-                }
-            if (enemyPaddleSpeedX < -enemyPaddleSpeedLimitX) {
-                enemyPaddleSpeedX = -enemyPaddleSpeedLimitX;
-                }
-            enemyPaddleX = enemyPaddleX - enemyPaddleSpeedX;
-            };
-        }
-    };
-
-var canvas = document.getElementById("pongcanvas"); 
-var processingInstance = new Processing(canvas, sketchProc); 
-</script>
-</body>
+            document.head.appendChild(scrElt);
+        </script>
+    </body>
 </html>
