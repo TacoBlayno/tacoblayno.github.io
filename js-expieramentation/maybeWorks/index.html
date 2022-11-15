@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="resources/libs/processing.js"></script>
-    </head>
+<html> 
+  <head>
+    <title>Processing.JS inside Webpages: Template</title> 
+  </head>
+  <body>
+	<!--This draws the canvas on the webpage -->
+    <canvas id="mycanvas"></canvas> 
+  </body>
+ 
+  <!-- Include the processing.js library -->
+  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  <script>
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+      size(400, 400); 
+      frameRate(30);
+        
+      // Paste code from Khan Academy here:
+      fill(255, 255, 0);
+      ellipse(200, 200, 200, 200);
+      noFill();
+      stroke(0, 0, 0);
+      strokeWeight(2);
+      arc(200, 200, 150, 100, 0, PI);
+      fill(0, 0, 0);
+      ellipse(250, 200, 10, 10);
+      ellipse(153, 200, 10, 10);
+    }};
 
-    <body>
-        <div id="sketchContainer">
-            <!-- Works if I uncomment this!
-            <canvas data-processing-sources="js/header_sketches/my_awesome_sketch.js"></canvas>
-            -->
-        </div>
-
-        <script>
-            var scrElt = document.createElement("script");
-            scrElt.type = "text/javascript";
-            scrElt.src = "resources/libs/processing.js";
-            scrElt.async = false;
-
-            scrElt.onload = function() {
-                var canvas = document.createElement("canvas");
-                canvas.setAttribute("data-processing-sources", "js/header_sketches/my_awesome_sketch.js");
-                document.getElementById("sketchContainer").appendChild(canvas);
-            };
-
-            document.head.appendChild(scrElt);
-        </script>
-    </body>
+  // Get the canvas that ProcessingJS will use
+  var canvas = document.getElementById("mycanvas"); 
+  // Pass the function to ProcessingJS constructor
+  var processingInstance = new Processing(canvas, programCode); 
+  </script>
 </html>
