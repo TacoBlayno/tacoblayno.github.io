@@ -56,30 +56,20 @@
     /* Dark mode */
     @media (prefers-color-scheme: dark) {
 	    
-		a {   
-    		color: #00f;
+		a:link {
+			color: #00f;
 		}
 		
-		
-	    a:focus {
-	  		color: #0f0;
+		a:visited {
+			color: #0ff;
 		}
-
+		
+		a:hover {
+			color: #0f0;
+		}
+		
 		a:active {
-    		color: #0f0;
-		}
-
-		a[tabindex]:focus {
-    		color: #0f0;
-    		outline: none;
-		}
-	    
-	    .visit {
-  			fill: #0ff;
-		}
-
-		a:visited .visit {
-	  		fill: #0f0;
+			background-color: #fff;
 		}
     
         body {
