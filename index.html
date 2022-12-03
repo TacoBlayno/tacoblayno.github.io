@@ -13,6 +13,14 @@
         top: 60px;
     }
     
+    .dark {
+	    color: #fff;
+    }
+
+    .light {
+	    color: #000;
+    }
+    
     p{
         padding: 21px;
     }
@@ -69,7 +77,19 @@
         <footer><a href="https://tacoblayno.github.io/thanks/">Thanks</a></footer>
         
         <script>
-            const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches;
+            let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            console.log(matched);
+
+            let body = document.querySelector("body");
+            let content = document.getElementById("content");
+
+            if (dark) {
+            	body.style.backgroundColor = "#1a1a1a";
+	            content.setAttribute("class", "dark");
+            } else {
+            	body.style.backgroundColor = "#f5f5f5";
+	            content.setAttribute("class", "light");
+            }
         </script>
     </body>
 </html>
