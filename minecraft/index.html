@@ -8,19 +8,6 @@
     <link rel="stylesheet" href="https://baseStyle.index.css" />
   </head>
   <body>
-    <script>
-      var minecraftSectionListEl = document.getElementById("minecraft-section-list");
-    
-    var dataBase = [
-      shapes = {
-        name: "Shapes Behavior Pack",
-        id: "shapes"
-        description: "",
-        src: "https://tacoblayno.github.io/minecraft/shapes.html"
-      }
-    ];
-    </script>
-    
     <header>
       <a id="headA" href="https://tacoblayno.github.io/">TacoBlayno's Website</a></header>
     <h1>About this page</h1>
@@ -37,6 +24,17 @@
     <input id="travel" type="button" value="travel-button" onclick="travel();" />
   
   <script>
+    var minecraftSectionListEl = document.getElementById("minecraft-section-list");
+    
+    var dataBase = [
+      shapes = {
+        name: "Shapes Behavior Pack",
+        id: "shapes"
+        description: "",
+        src: "https://tacoblayno.github.io/minecraft/shapes.html"
+      }
+    ];
+    
     function travel() {
       if (minecraftSectionListEl.value === "select") {
         alert("You have not selected anything, yet you are attempting to travel to a link!");
