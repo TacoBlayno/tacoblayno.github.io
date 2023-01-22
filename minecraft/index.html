@@ -29,6 +29,7 @@
     var dataBase = [
       shapes = {
         name: "Shapes Behavior Pack",
+        id: "shapes"
         description: "",
         src: "/minecraft/shapes.html"
       }
@@ -39,7 +40,7 @@
         alert("You have not selected anything, yet you are attempting to travel to a link!");
       } else {
         for (let index = 0; index < dataBase.length; index++) {
-          if (dataBase[index] == minecraftSectionListEl.value) {
+          if (dataBase[index][id] == minecraftSectionListEl.value) {
             window.open(dataBase[index][src]);
           } else {alert("not equal")}
         }
