@@ -37,6 +37,12 @@
     function travel() {
       if (minecraftSectionListEl.value === "select") {
         alert("You have not selected anything, yet you are attempting to travel to a link!");
+      } else {
+        for (let index = 0; index < dataBase.length; index++) {
+          if (dataBase[index] == minecraftSectionListEl.value) {
+            window.open(dataBase[index][src]);
+          }
+        }
       }
     }
   </script>
