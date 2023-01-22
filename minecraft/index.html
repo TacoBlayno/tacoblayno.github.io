@@ -12,12 +12,33 @@
       <a id="headA" href="https://tacoblayno.github.io/">TacoBlayno's Website</a></header>
     <h1>About this page</h1>
     <p>This web page links web pages about what I am doing in Minecraft right now. Right now it is mostly add-ons and add-on downloads.</p>
-    <select>
+    <label for="minecraft-section-list">Select what Minecraft  thing to view:<label>
+    <select id="minecraft-section-list">
+      <option value="select">&#60;!--Select--></option>
       <optgroup label="Add-ons">
         <optgroup label="Commands">
           <option value="shapes">Shapes</option>
         </optgroup>
       </optgroup>
     </select>
+    <button onclick="travel()">Travel</button>
+  <script>
+    var minecraftSectionListEl = document.getElementById("minecraft-section-list");
+    
+    
+    var dataBase = [
+      shapes {
+        name: "Shapes Behavior Pack",
+        description: "",
+        src: "/minecraft/shapes.html"
+      }
+    ];
+    
+    function travel() {
+      if (minecraftSectionListEl.value === "select") {
+        alert("You have not selected anything, yet you are attempting to travel to a link!");
+      }
+    }
+  </script>
   </body>
 </html>
