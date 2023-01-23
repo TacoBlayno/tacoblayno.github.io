@@ -17,8 +17,11 @@
       <option value="select">&#60;!--Select--></option>
       <optgroup label="Add-ons">
         <optgroup label="Commands">
-          <option value="shapes">Shapes</option>
+          <option value="shapes-commands">Shapes</option>
         </optgroup>
+      <optgroup label="Generator">
+        <option value="parkour-generator">Parkour</option>
+      </optgroup>
       </optgroup>
     </select>
   <button onclick="information()">Information</button>
@@ -31,11 +34,17 @@
     var minecraftSectionDiscriptionEl = document.getElementById("minecraft-section-description");
     
     var dataBase = [
-      shapes = {
+      shapesCommands = {
         name: "Shape Commands Behavior Pack",
-        id: "shapes",
+        id: "shapes-commands",
         description: "This behavior pack adds shape filling commands to Minecraft.",
         src: "https://tacoblayno.github.io/minecraft/shapes.html"
+      }
+      parkourGenerator = {
+        name: "Parkour Generator Behavior Pack",
+        id: "parkour-generator",
+        description: "",
+        src: ""
       }
     ];
     
