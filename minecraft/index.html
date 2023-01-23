@@ -32,9 +32,9 @@
     
     var dataBase = [
       shapes = {
-        name: "Shapes Behavior Pack",
+        name: "Shape Commands Behavior Pack",
         id: "shapes",
-        description: "",
+        description: "This behavior pack adds shape filling commands to Minecraft.",
         src: "https://tacoblayno.github.io/minecraft/shapes.html"
       }
     ];
@@ -59,7 +59,7 @@
           if (dataBase[index]["id"] === minecraftSectionListEl.value) {
             clearChildren(minecraftSectionDiscriptionEl);
             
-            let name = document.createElement("h2");
+            let name = document.createElement("h3");
             let description = document.createElement("p");
             
             name.appendChild(document.createTextNode(dataBase[index]["name"]));
