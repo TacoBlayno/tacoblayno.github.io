@@ -21,16 +21,20 @@
         </optgroup>
       </optgroup>
     </select>
+  <button onclick="information()">Information<button>
   <button onclick="travel()">Travel</button>
   
+    <div id="minecraft-section-description"></div>
+    
   <script>
     var minecraftSectionListEl = document.getElementById("minecraft-section-list");
+    var minecraftSectionDiscriptionEl = document.getElementById("minecraft-section-description");
     
     var dataBase = [
       shapes = {
         name: "Shapes Behavior Pack",
         id: "shapes",
-        discription: "",
+        description: "",
         src: "https://tacoblayno.github.io/minecraft/shapes.html"
       }
     ];
@@ -42,7 +46,40 @@
         for (let index = 0; index < dataBase.length; index++) {
           if (dataBase[index]["id"] == minecraftSectionListEl.value) {
             window.open(dataBase[index]["src"]);
-          } else {alert("not equal")}
+          }
+        }
+      }
+    }
+    
+    function information() {
+      if (minecraftSectionListEl.value === "select") {
+        alert("You have not selected anything, yet you are attempting to access some information about a page!");
+      } else {
+        for (let index = 0; index < dataBase.length; index++) {
+          if (dataBase[index]["id"] == minecraftSectionListEl.value) {
+            clearChildren(minecraftSectionDiscriptionEl);
+            
+            let name = document.createElement("h2");
+            let description = document.createElement("p");
+            
+            name.appendChild(document.createTextNode(dataBase[index]["name"]));
+            description.appendChild(document.createTextNode(dataBase[index]["description"]));
+            
+            minecraftSectionDiscriptionEl.appendChild(name);
+            minecraftSectionDiscriptionEl.appendChild(description);
+          }
+        }
+      }
+      
+      function clearChildren(element) {
+        if (element === string) {
+          var div = document.getElementById(element);
+        } else {
+          div = element;
+        }
+        
+        while(div.firstChild) {
+          div.removeChild(div.firstChild);
         }
       }
     }
