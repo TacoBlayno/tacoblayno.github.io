@@ -21,7 +21,7 @@
         </optgroup>
       </optgroup>
     </select>
-  <button onclick="information()">Information<button>
+  <button onclick="information()">Information</button>
   <button onclick="travel()">Travel</button>
   
     <div id="minecraft-section-description"></div>
@@ -44,7 +44,7 @@
         alert("You have not selected anything, yet you are attempting to travel to a link!");
       } else {
         for (let index = 0; index < dataBase.length; index++) {
-          if (dataBase[index]["id"] == minecraftSectionListEl.value) {
+          if (dataBase[index]["id"] === minecraftSectionListEl.value) {
             window.open(dataBase[index]["src"]);
           }
         }
@@ -56,7 +56,7 @@
         alert("You have not selected anything, yet you are attempting to access some information about a page!");
       } else {
         for (let index = 0; index < dataBase.length; index++) {
-          if (dataBase[index]["id"] == minecraftSectionListEl.value) {
+          if (dataBase[index]["id"] === minecraftSectionListEl.value) {
             clearChildren(minecraftSectionDiscriptionEl);
             
             let name = document.createElement("h2");
@@ -72,7 +72,7 @@
       }
       
       function clearChildren(element) {
-        if (element === string) {
+        if (typeof(element) === "string") {
           var div = document.getElementById(element);
         } else {
           div = element;
