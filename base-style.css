@@ -2,7 +2,6 @@ body {
     position: absolute;
     top: 60px;
 }
-
 p {
     padding: 21px;
 }
@@ -13,7 +12,6 @@ p {
         background-color: #fff;
         color: #0f0;
     }
-
     header {
         position: fixed;
         width: 100%;
@@ -29,13 +27,11 @@ p {
         text-decoration: none;
         z-index: 1;
     }
-    
     headA {
         color: #fff;
         text-decoration: none;
         background-color: none;
     }
-
     footer {
         background-color: #faf;
         border-top: 15px solid #000;
@@ -49,30 +45,23 @@ p {
         width: 100%;
     }
 }
-
 @media (prefers-color-scheme: dark) {
-
     a:link {
         color: #0f0;
     }
-
     a:visited {
         color: #0af;
     }
-
     a:hover {
         color: #fff;
     }
-
     a:active {
         background-color: #fff;
     }
-
     body {
         background-color: #000;
         color: #fff;
     }
-
     header {
         position: fixed;
         color: #0f0;
@@ -89,13 +78,11 @@ p {
         text-decoration: none;
         z-index: 1;
     }
-    
     headA {
         color: #fff;
         text-decoration: none;
         background-color: none;
     }
-  
     footer {
         background-color: #f0f;
         border-top: 15px solid #0f0;
