@@ -1,4 +1,4 @@
-  body {
+body {
     position: absolute;
     top: 60px;
 }
@@ -28,6 +28,11 @@ p {
         padding: 7px;
         z-index: 1;
     }
+  
+    #headA {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
 
     footer {
         background-color: #faf;
@@ -42,7 +47,7 @@ p {
         width: 100%;
     }
 }
-/* Dark mode */
+
 @media (prefers-color-scheme: dark) {
 
     a:link {
@@ -82,6 +87,11 @@ p {
         z-index: 1;
     }
 
+    #headA {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+  
     footer {
         background-color: #f0f;
         border-top: 15px solid #0f0;
