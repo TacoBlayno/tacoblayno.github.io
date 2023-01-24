@@ -27,7 +27,6 @@ p {
         margin-bottom: 15px;
         padding: 7px;
         text-decoration: none;
-        color: #000;
         z-index: 1;
     }
 
@@ -82,12 +81,7 @@ p {
         margin-bottom: 15px;
         padding: 7px;
         text-decoration: none;
-        color: #fff;
         z-index: 1;
-    }
-    
-    header:link {
-        color: #fff;
     }
   
     footer {
