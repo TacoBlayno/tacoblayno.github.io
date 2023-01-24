@@ -85,6 +85,10 @@ p {
         color: #fff;
         z-index: 1;
     }
+    
+    header:link {
+        color: #fff;
+    }
   
     footer {
         background-color: #f0f;
