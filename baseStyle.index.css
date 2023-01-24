@@ -26,12 +26,8 @@ p {
         margin-right: 30px;
         margin-bottom: 15px;
         padding: 7px;
-        z-index: 1;
-    }
-  
-    #headA {
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        z-index: 1;
     }
 
     footer {
@@ -84,12 +80,8 @@ p {
         margin-right: 30px;
         margin-bottom: 15px;
         padding: 7px;
-        z-index: 1;
-    }
-
-    #headA {
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        z-index: 1;
     }
   
     footer {
