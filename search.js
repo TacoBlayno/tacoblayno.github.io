@@ -34,7 +34,7 @@ function search(value) {
         for (index = 1; index < values.length; index++) {
           newValue.push(values[index]);
         }
-        if (searchKeys(newValue, values[0]]) === false) {
+        if (searchKeys(newValue, values[0])) === false) {
           document.write();
           object["src"]
           return true;
