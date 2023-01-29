@@ -42,7 +42,7 @@ function search(value) {
             return true;
           } else {
             let searchElP = document.createElement("p");
-            searchElP.appendChild(document.createTextNode(object[0]["discription"]));
+            searchElP.appendChild(document.createTextNode(object["discription"]));
             searchElDiv.apppendChild(searchElP);
             return true;
           }
