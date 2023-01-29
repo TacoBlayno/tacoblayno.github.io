@@ -16,7 +16,7 @@ function search(value) {
     "Minecraft" : {
       "Home" : {
         "src" : "https://tacoblayno.github.io/minecraft/home",
-        "description" : "Hello",
+        "discription" : "Hello",
       },
       "Parkour Generator" : {},
       "Shape Comands" : {},
