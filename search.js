@@ -29,12 +29,12 @@ function search(value) {
   
   function searchKeys(value, object) {
     if (object[values[0]]) {
-      if (typeof(object[values[0]]) === "object") {
+      if (typeof(object[values[0]) === "object") {
         let newValue;
         for (index = 1; index < values.length; index++) {
           newValue.push(values[index]);
         }
-        if (searchKeys(newValue, values[0])) === false) {
+        if (searchKeys(newValue, values[0]) === false) {
           document.write();
           object["src"]
           return true;
