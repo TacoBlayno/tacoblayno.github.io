@@ -1,11 +1,13 @@
-var webPages = {
-  "Minecraft" : {
-    "Home" : {},
-    "Parkour Generator" : {},
-    "Shape Comands" : {},
-  },
-  "History" : {
-    
-  },
-  //"" : {},
+function search(value) {
+  let webPages = {
+    "Minecraft" : {
+      "Home" : {},
+      "Parkour Generator" : {},
+      "Shape Comands" : {},
+    },
+    "History" : {
+      
+    },
+    //"" : {},
+  }
 }
