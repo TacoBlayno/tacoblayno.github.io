@@ -3,6 +3,7 @@ searchEl.addEventListener("keydown", function(event) {
   if (event.keyCode === 13) {
     search(searchEl.value);
   };
+  document.write();
 });
 
 function search(value) {
