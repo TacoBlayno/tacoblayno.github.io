@@ -6,6 +6,7 @@ searchEl.addEventListener("keydown", function(event) {
 });
 
 function search(value) {
+  document.write();
   let webPages = {
     "Minecraft" : {
       "Home" : {},
