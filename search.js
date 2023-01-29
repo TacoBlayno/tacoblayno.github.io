@@ -31,7 +31,7 @@ function search(value) {
     if (object[values[0]]) {
       if (typeof(object[values[0]]) === "object") {
         if (values.length > 0) {
-          let newValue;
+          let newValue = [];
           for (index = 1; index < values.length; index++) {
             newValue.push(values[index]);
           }
