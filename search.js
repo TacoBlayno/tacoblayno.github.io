@@ -1,4 +1,4 @@
-var searchEl = document.getElementById("search");
+var searchEl = document.getElementById("search-bar");
 var searchElDiv = document.getElementById("search-div");
 
 searchEl.addEventListener("keydown", function(event) {
