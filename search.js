@@ -16,7 +16,7 @@ function search(value) {
     "Minecraft" : {
       "Home" : {
         "src" : "https://tacoblayno.github.io/minecraft/home",
-        "description" : "",
+        "description" : "Hello",
       },
       "Parkour Generator" : {},
       "Shape Comands" : {},
@@ -35,9 +35,10 @@ function search(value) {
           for (index = 1; index < values.length; index++) {
             newValue.push(values[index]);
           }
-         if (searchKeys(newValue, values[0]) === false) {
-            document.write();
-            object["src"]
+          if (searchKeys(newValue, values[0]) === false) {
+            let searchElP = document.createElement("p");
+            searchElP.appendChild(document.createTextNode(object[0]["discription"]));
+            searchElDiv.apppendChild(searchElP);
             return true;
           } else {
             return true;
