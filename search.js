@@ -41,7 +41,9 @@ function search(value) {
             searchElDiv.apppendChild(searchElP);
             return true;
           } else {
-            document.write();
+            let searchElP = document.createElement("p");
+            searchElP.appendChild(document.createTextNode(object[0]["discription"]));
+            searchElDiv.apppendChild(searchElP);
             return true;
           }
         } else {
