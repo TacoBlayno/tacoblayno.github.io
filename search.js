@@ -41,6 +41,7 @@ function search(value) {
             searchElDiv.apppendChild(searchElP);
             return true;
           } else {
+            document.write();
             return true;
           }
         } else {
