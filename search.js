@@ -1,9 +1,9 @@
 var searchEl = document.getElementById("search");
-/*searchEl.addEventListener("keydown", function(event) {
+searchEl.addEventListener("keydown", function(event) {
   if (event.keyCode === 13) {
     search(searchEl.value);
   };
-});*/
+});
 
 function search(value) {
   document.write();
