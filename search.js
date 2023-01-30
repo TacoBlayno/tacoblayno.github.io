@@ -43,7 +43,7 @@ function search(value) {
             return true;
           } else {
             let searchElP = document.createElement("p");
-            searchElP.appendChild(document.createTextNode(object["discription"]));
+            searchElP.appendChild(document.createTextNode(object["discription"] + str(object) + object));
             searchElDiv.appendChild(searchElP);
             return true;
           }
