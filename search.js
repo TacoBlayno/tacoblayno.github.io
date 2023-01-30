@@ -15,6 +15,7 @@ function search(value) {
   let webPages = {
     "Minecraft" : {
       "Home" : {
+        "discription" : "hallo",
         "src" : "https://tacoblayno.github.io/minecraft/home",
         "discription" : "Hello",
       },
