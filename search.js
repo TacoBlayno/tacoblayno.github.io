@@ -50,7 +50,7 @@ function search(value) {
             return true;
           }
         } else {
-          document.write();
+          //document.write();
         }
       } else {
         return false;
