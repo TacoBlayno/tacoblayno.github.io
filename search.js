@@ -44,6 +44,7 @@ function search(value) {
           } else {
             let searchElP = document.createElement("p");
             console.log(object);
+            console.log(object.toString());
             searchElP.appendChild(document.createTextNode(object["discription"]));
             searchElDiv.appendChild(searchElP);
             return true;
