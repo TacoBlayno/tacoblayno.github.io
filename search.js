@@ -1,3 +1,5 @@
+import minecraft from "https://tacoblayno.github.io/minecraft/files_for=search.js";
+
 var searchEl = document.getElementById("search-bar");
 var searchElDiv = document.getElementById("search-div");
 
@@ -13,12 +15,12 @@ function search(value) {
   
   searchElDiv.innerHTML = "";
   let webPages = {
-    "Minecraft" : {
+    "Minecraft" : minecraft(), /*{
       "Home" : {
         "discription" : "hallo",
         "src" : "https://tacoblayno.github.io/minecraft/home",
         "discription" : "Hello",
-      },
+      },*/
       "Parkour Generator" : {},
       "Shape Comands" : {},
     },
