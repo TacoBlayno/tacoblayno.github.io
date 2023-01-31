@@ -35,6 +35,7 @@ function search(value) {
           if (searchKeys(newValues, object[values[0]]) === false) {
             let searchElP = document.createElement("p");
             searchElP.appendChild(document.createTextNode(object[0]["discription"]));
+            console.log(object[0]);
             searchElDiv.apppendChild(searchElP);
             console.log("34-38");
             return true;
