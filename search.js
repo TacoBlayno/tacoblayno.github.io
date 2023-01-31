@@ -56,6 +56,8 @@ function search(value) {
         console.log("54-55");
         return false;
       }
+    } else {
+      return false;
     }
   }
   
