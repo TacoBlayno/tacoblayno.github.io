@@ -8,7 +8,7 @@ searchEl.addEventListener("keydown", function(event) {
 });
 
 function search(value) {
-  values = value.split(" ");
+  var values = value.split(" ");
   delete value;
   
   searchElDiv.innerHTML = "";
@@ -20,19 +20,19 @@ function search(value) {
   
   console.log(webPages["Minecraft"]);
   
-  function searchKeys(value, object) {
+  function searchKeys(values, object) {
     console.log(object[values[0]])
     if (object[values[0]]) {
       console.log("25-55");
       if (typeof(object[values[0]]) === "object") {
         if (values.length > 0) {
-          let newValue = [];
+          let newValues = [];
           for (index = 1; index < values.length; index++) {
-            newValue.push(values[index]);
+            newValues.push(values[index]);
             console.log("30-31");
-            console.log(newValue);
+            console.log(newValues);
           }
-          if (searchKeys(newValue, values[0]) === false) {
+          if (searchKeys(newValues, values[0]) === false) {
             let searchElP = document.createElement("p");
             searchElP.appendChild(document.createTextNode(object[0]["discription"]));
             searchElDiv.apppendChild(searchElP);
@@ -42,7 +42,7 @@ function search(value) {
             let searchElP = document.createElement("p");
             console.log(object);
             console.log(object.toString());
-            searchElP.appendChild(document.createTextNode(webPages["Minecraft"]["Home"]["discription"]));
+            searchElP.appendChild(document.createTextNode(object["discription"]));
             searchElDiv.appendChild(searchElP);
             console.log("40-46");
             return true;
