@@ -45,7 +45,7 @@ function search(value) {
             let searchElP = document.createElement("p");
             console.log(object);
             console.log(object.toString());
-            searchElP.appendChild(document.createTextNode(object["discription"]));
+            searchElP.appendChild(document.createTextNode(webPages["Minecraft"]["Home"]["discription"]));
             searchElDiv.appendChild(searchElP);
             return true;
           }
