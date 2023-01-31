@@ -34,16 +34,16 @@ function search(value) {
           }
           if (searchKeys(newValues, object[values[0]]) === false) {
             let searchElP = document.createElement("p");
-            searchElP.appendChild(document.createTextNode(object[0]["discription"]));
-            console.log(object[0]);
+            searchElP.appendChild(document.createTextNode(object["discription"]));
+            console.log(object);
             searchElDiv.apppendChild(searchElP);
             console.log("34-38");
             return true;
           } else {
             let searchElP = document.createElement("p");
-            console.log(object);
+            console.log(object[values[0]]);
             console.log(object.toString());
-            searchElP.appendChild(document.createTextNode(object["discription"]));
+            searchElP.appendChild(document.createTextNode(object[values[0]]["discription"]));
             searchElDiv.appendChild(searchElP);
             console.log("40-46");
             return true;
