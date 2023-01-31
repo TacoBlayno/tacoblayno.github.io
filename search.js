@@ -13,15 +13,7 @@ function search(value) {
   
   searchElDiv.innerHTML = "";
   let webPages = {
-    Minecraft : minecraftFolder(), /*{
-      "Home" : {
-        "discription" : "hallo",
-        "src" : "https://tacoblayno.github.io/minecraft/home",
-        "discription" : "Hello",
-      },
-      "Parkour Generator" : {},
-      "Shape Comands" : {},
-    },*/
+    Minecraft : minecraftFolder(),
     History : {},
     //"" : {},
   };
@@ -30,16 +22,19 @@ function search(value) {
   
   function searchKeys(value, object) {
     if (object[values[0]]) {
+      console.log("25-55");
       if (typeof(object[values[0]]) === "object") {
         if (values.length > 0) {
           let newValue = [];
           for (index = 1; index < values.length; index++) {
             newValue.push(values[index]);
+            console.log("30-31");
           }
           if (searchKeys(newValue, values[0]) === false) {
             let searchElP = document.createElement("p");
             searchElP.appendChild(document.createTextNode(object[0]["discription"]));
             searchElDiv.apppendChild(searchElP);
+            console.log("34-38");
             return true;
           } else {
             let searchElP = document.createElement("p");
@@ -47,16 +42,19 @@ function search(value) {
             console.log(object.toString());
             searchElP.appendChild(document.createTextNode(webPages["Minecraft"]["Home"]["discription"]));
             searchElDiv.appendChild(searchElP);
+            console.log("40-46");
             return true;
           }
         } else {
-          document.write();
+          console.log("49");
         }
+        console.log("27-51");
       } else {
+        console.log("");
         return false;
       }
     }
   }
   
-  searchKeys(values, webPages)
+  searchKeys(values, webPages);
 }
