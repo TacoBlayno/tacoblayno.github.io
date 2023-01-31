@@ -1,4 +1,4 @@
-function minecraft() {
+function minecraftFolder() {
   var minecraft = {
     "Home" : {
       "src" : "https://tacoblayno.github.io/minecraft/home",
@@ -7,4 +7,6 @@ function minecraft() {
     "Parkour Generator" : {},
     "Shape Comands" : {},
   };
+  
+  return minecraft
 }
