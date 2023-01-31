@@ -26,6 +26,8 @@ function search(value) {
     //"" : {},
   };
   
+  console.log(webPages["Minecraft"]);
+  
   function searchKeys(value, object) {
     if (object[values[0]]) {
       if (typeof(object[values[0]]) === "object") {
