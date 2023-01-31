@@ -13,7 +13,7 @@ function search(value) {
   
   searchElDiv.innerHTML = "";
   let webPages = {
-    "Minecraft" : minecraftFolder(), /*{
+    Minecraft : minecraftFolder(), /*{
       "Home" : {
         "discription" : "hallo",
         "src" : "https://tacoblayno.github.io/minecraft/home",
@@ -22,7 +22,7 @@ function search(value) {
       "Parkour Generator" : {},
       "Shape Comands" : {},
     },*/
-    "History" : {},
+    History : {},
     //"" : {},
   };
   
