@@ -36,7 +36,7 @@ function search(value) {
             let searchElP = document.createElement("p");
             searchElP.appendChild(document.createTextNode(object["discription"]));
             console.log(object);
-            searchElDiv.apppendChild(searchElP);
+            searchElDiv.appendChild(searchElP);
             console.log("34-38");
             return true;
           } else {
