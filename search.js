@@ -32,7 +32,7 @@ function search(value) {
             console.log("30-31");
             console.log(newValues);
           }
-          if (searchKeys(newValues, values[0]) === false) {
+          if (searchKeys(newValues, object[values[0]]) === false) {
             let searchElP = document.createElement("p");
             searchElP.appendChild(document.createTextNode(object[0]["discription"]));
             searchElDiv.apppendChild(searchElP);
