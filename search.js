@@ -21,6 +21,7 @@ function search(value) {
   console.log(webPages["Minecraft"]);
   
   function searchKeys(value, object) {
+    console.log(object[values[0]])
     if (object[values[0]]) {
       console.log("25-55");
       if (typeof(object[values[0]]) === "object") {
@@ -29,6 +30,7 @@ function search(value) {
           for (index = 1; index < values.length; index++) {
             newValue.push(values[index]);
             console.log("30-31");
+            console.log(newValue);
           }
           if (searchKeys(newValue, values[0]) === false) {
             let searchElP = document.createElement("p");
@@ -50,7 +52,7 @@ function search(value) {
         }
         console.log("27-51");
       } else {
-        console.log("");
+        console.log("54-55");
         return false;
       }
     }
