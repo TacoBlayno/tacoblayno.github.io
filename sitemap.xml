@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://tacoblayno.github.io/home.html</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2023-2-1</lastmod>
+	</url>
+	<url>
+		<loc>https://tacoblayno.github.io/minecraft/home.html</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2023-1-31</lastmod>
+	</url>
+	<url>
+		<loc>https://tacoblayno.github.io/history/home.html</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2023-1-26</lastmod>
+	</url>
+</urlset>
