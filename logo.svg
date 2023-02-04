@@ -1,5 +1,5 @@
 <svg  version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M 10 200 c 5 -150 255 -160 260 15" stroke="none"
   fill="yellow" />
-  <path d="M 270 220" stroke="black" fill="orange" />
+  <path d="M 270 220 l 0 0" stroke="black" fill="orange" />
 </svg>
