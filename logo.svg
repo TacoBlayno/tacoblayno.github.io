@@ -1,4 +1,4 @@
 <svg  version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10 200 c 5 -150 255 -160 260 15" stroke="none"
-  fill="yellow" />
+
+  <path d="M 200 15 l 10 0" stroke="none" fill="yellow">
 </svg>
