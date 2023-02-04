@@ -5,6 +5,6 @@
   <g>
   <path d="M 10 200 c 5 -150 255 -160 260 15" stroke="none"
   fill="yellow" />
-  <path d="M 200 15" fill="yellow" stroke="none">
+  <path d="M 200 15 l 10 0" stroke="none" fill="yellow">
   </g>
 </svg>
