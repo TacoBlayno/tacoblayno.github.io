@@ -1,5 +1,5 @@
 var searchEl = document.getElementById("search-bar");
-var searchSubmitEl = document.getElementVyId("search-submit">
+var searchSubmitEl = document.getElementById("search-submit">
 var searchElDiv = document.getElementById("search-div");
 
 searchEl.addEventListener("keydown", function(event) {
