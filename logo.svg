@@ -3,5 +3,5 @@
   fill="yellow" />
   <path d="M 20 190 c 5 -150 255 -160 260 15" stroke="none"
   fill="green" />
-  <path d="M 270 215 q 25 -7 -10 -20" stroke="none" fill="orange" />
+  <path d="M 270 215 q 25 -10 -10 -20" stroke="none" fill="orange" />
 </svg>
