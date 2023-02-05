@@ -11,6 +11,9 @@
     <path d="M 4.5 38 c 1 -30 51 -32 52 3" stroke="black"
   fill="orange" />
   </g>
+  <g>
   <path d="M 2 40 c 1 -30 51 -32 52 3" stroke="black"
   fill="yellow" />
+  <line x1="2" y1="40" x2="50" y2="50"/>
+  </g>
 </svg>
