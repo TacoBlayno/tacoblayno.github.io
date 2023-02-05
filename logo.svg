@@ -1,4 +1,4 @@
-<svg  version="1.1" xmlns="http://www.w3.org/2000/svg" veiwBox="0 0 40 40" width"400" height="400">
+<svg  version="1.1" xmlns="http://www.w3.org/2000/svg" width"400" height="400">
   <g>
     <path d="M 270 215 q 25 -10 -10 -20.5" stroke="black" fill="orange" />
     <path d="M 20.5 190 c 5 -150 255 -160 260 15" stroke="black"
