@@ -5,7 +5,7 @@
         filter: brightness(2);
       }
       #shell-back {
-        fill: #ffa500;
+        fill: #ff6600;
       }
       #shell-front {
         fill: #ffaa00;
@@ -13,10 +13,10 @@
     }
     @media (prefers-color-scheme: light) {
       #shell-back {
-        fill: #ff6600;
+        fill: #ffa500;
       }
       #shell-front {
-        fill: #ffaa00;
+        fill: #ffff00;
       }
     }
   </style>
