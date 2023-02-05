@@ -12,11 +12,11 @@ function search(value) {
   delete value;
   
   searchElDiv.innerHTML = "";
-  let webPages = {
+  let webPages = retrieveData() /*{
     Minecraft : minecraftFolder(),
     History : {},
     //"" : {},
-  };
+  };*/
   
   console.log(webPages["Minecraft"]);
   
