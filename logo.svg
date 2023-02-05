@@ -4,16 +4,21 @@
       :root {
         filter: brightness(2);
       }
+    @media (prefers-color-scheme: light) {
+      #shell-back {
+        fill: #ffa500;
+      }
+      #shell-front {
+        fill: #ffff00;
+      }
     }
   </style>
-  <g>
-    <path d="M 53.8 42.8 q 6.4 -3 -2 -4.1" stroke="black" fill="orange" />
-    <path d="M 4.5 38 c 1 -30 51 -32 52 3" stroke="black"
-  fill="orange" />
+  <g id="shell-back">
+    <path d="M 53.8 42.8 q 6.4 -3 -2 -4.1" />
+    <path d="M 4.5 38 c 1 -30 51 -32 52 3" />
   </g>
-  <g>
-  <path d="M 2 40 c 1 -30 51 -32 52 3" stroke="black"
-  fill="yellow" />
-  <line x1="2" y1="39.6" x2="54" y2="42.8" stroke="black" />
+  <g id="shell-front">
+  <path d="M 2 40 c 1 -30 51 -32 52 3" />
+  <line x1="2" y1="39.6" x2="54" y2="42.8" />
   </g>
 </svg>
