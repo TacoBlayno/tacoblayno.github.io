@@ -1,12 +1,14 @@
 var searchEl = document.getElementById("search-bar");
+var searchSubmitEl = document.getElementVyId("search-submit">
 var searchElDiv = document.getElementById("search-div");
 
 searchEl.addEventListener("keydown", function(event) {
   if (event.keyCode === 13) {
-    document.write();
     search(searchEl.value);
   };
 });
+
+searchSubmitEl.addEventListener("click", function() { document.write(); });
 
 function search(value) {
   var values = value.split(" ");
