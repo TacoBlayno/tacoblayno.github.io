@@ -1,7 +1,7 @@
 <svg  version="1.1" xmlns="http://www.w3.org/2000/svg">
   <g>
     <path d="M 270 215 q 25 -10 -10 -20" stroke="black" fill="orange" />
-    <path d="M 20 190 c 5 -150 255 -160 260 15" stroke="black"
+    <path d="M 21 190 c 5 -150 255 -160 260 15" stroke="black"
   fill="orange" />
   </g>
   <path d="M 10 200 c 5 -150 255 -160 260 15" stroke="black"
