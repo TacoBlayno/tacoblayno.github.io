@@ -13,10 +13,10 @@
     }
     @media (prefers-color-scheme: light) {
       #shell-back {
-        fill: #ffa500;
+        fill: #ff5200;
       }
       #shell-front {
-        fill: #ffff00;
+        fill: #ffaa00;
       }
     }
   </style>
