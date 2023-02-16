@@ -54,7 +54,7 @@ p {
 }
 @media (prefers-color-scheme: dark) {
     --headerFooterBackground: #f0f;
-    --linkColor: var(--headerFooterColor);
+    --linkColor: #0f0;
 
     a:link {
         color: var(--linkColor);
