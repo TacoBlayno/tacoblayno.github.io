@@ -1,6 +1,7 @@
 body {
     position: absolute;
     top: 60px;
+    font-size: calc(100% / 64);
 }
 p {
     padding: 21px;
