@@ -49,8 +49,12 @@ p {
     }
 }
 @media (prefers-color-scheme: dark) {
+    --headerFooterBackground: #f0f;
+    --linkColor: #0f0;
+    --headerFooterColor: var(--linkColor);
+
     a:link {
-        color: #0f0;
+        color: var(--linkColor);
     }
     a:visited {
         color: #0af;
@@ -67,10 +71,10 @@ p {
     }
     header {
         position: fixed;
-        color: #0f0;
+        color: var(--headerFooterColor);
         width: 100%;
         top: 0px;
-        background-color: #f0f;
+        background-color: var(--headerFooterBackground);
         border-bottom: 15px solid #0f0;
         font-style: italic;
         font-size: 50px;
@@ -83,15 +87,15 @@ p {
     }
 
     header a:link, header a:visited {
-        color: #0f0 !important;
+        color: var(--linkColor !important;
         text-decoration: none !important;
         background-color: none !important;
     }
         
     footer {
-        background-color: #f0f;
-        border-top: 15px solid #0f0;
-        color: #0f0;
+        background-color: var(--headerFooterBackground);
+        border-top: 15px solid var(--headerFooterColor);
+        color: var(--headerFooterColor);
         font-style: italic;
         margin: -10px;
         padding: 7px;
