@@ -90,7 +90,7 @@ p {
     }
 
     header a:link, header a:visited {
-        color: var(--linkColor !important;
+        color: var(--linkColor) !important;
         text-decoration: none !important;
         background-color: none !important;
     }
