@@ -2,14 +2,17 @@
 <site>
   <url>/home.html</url>
   <description>
+    This page of this site is the main page. It has the main search bar, and description of the site. It is a good place to be introduced to this site.
   </description>
   <history>
     <url>/history/home.html</url>
     <description>
+      This page is about the history contained on other pages in this site. It has a search bar for that folder.
     </description>
     <world-wide-web>
       <url>/history/world_wide_web.html</url>
       <description>
+        This page is about the world wide web—why it was made, who made it, and how it grew to be as big as it is.
       </description>
   </history>
   <minecraft>
