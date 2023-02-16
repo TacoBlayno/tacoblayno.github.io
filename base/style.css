@@ -28,9 +28,9 @@ p {
         z-index: 1;
     }
     headA {
-        color: #fff;
-        text-decoration: none;
-        background-color: none;
+        color: #fff !important;
+        text-decoration: none !important;
+        background-color: none !important;
     }
     footer {
         background-color: #faf;
@@ -79,9 +79,9 @@ p {
         z-index: 1;
     }
     headA {
-        color: #fff;
-        text-decoration: none;
-        background-color: none;
+        color: #fff !important;
+        text-decoration: none !important;
+        background-color: none !important;
     }
     footer {
         background-color: #f0f;
