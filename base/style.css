@@ -26,12 +26,11 @@ p {
         padding: 7px;
         text-decoration: none;
         z-index: 1;
-    }
-    headA {
         color: #fff !important;
         text-decoration: none !important;
         background-color: none !important;
     }
+        
     footer {
         background-color: #faf;
         border-top: 15px solid #000;
@@ -77,12 +76,11 @@ p {
         padding: 7px;
         text-decoration: none;
         z-index: 1;
-    }
-    headA {
         color: #fff !important;
         text-decoration: none !important;
         background-color: none !important;
     }
+        
     footer {
         background-color: #f0f;
         border-top: 15px solid #0f0;
