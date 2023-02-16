@@ -26,7 +26,10 @@ p {
         padding: 7px;
         text-decoration: none;
         z-index: 1;
-        color: #fff !important;
+    }
+
+    header:link {
+    color: #fff !important;
         text-decoration: none !important;
         background-color: none !important;
     }
@@ -76,6 +79,9 @@ p {
         padding: 7px;
         text-decoration: none;
         z-index: 1;
+    }
+
+    header:link {
         color: #fff !important;
         text-decoration: none !important;
         background-color: none !important;
