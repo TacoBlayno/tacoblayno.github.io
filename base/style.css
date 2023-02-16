@@ -28,14 +28,8 @@ p {
         z-index: 1;
     }
 
-    header a:link {
-    color: #fff !important;
-        text-decoration: none !important;
-        background-color: none !important;
-    }
-
-    header a:visited {
-        color: #fff !important;
+    header a:link, header a:visited {
+    color: #0f0 !important;
         text-decoration: none !important;
         background-color: none !important;
     }
@@ -87,13 +81,7 @@ p {
         z-index: 1;
     }
 
-    header a:link {
-        color: #fff !important;
-        text-decoration: none !important;
-        background-color: none !important;
-    }
-
-    header a:visited {
+    header a:link, header a:visited {
         color: #fff !important;
         text-decoration: none !important;
         background-color: none !important;
