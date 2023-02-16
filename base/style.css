@@ -49,10 +49,11 @@ p {
     }
 }
 @media (prefers-color-scheme: dark) {
-    --headerFooterBackground: #f0f;
-    --headerFooterColor: #0f0;
-    --linkColor: #0f0;
-
+    :root {
+        --headerFooterBackground: #f0f;
+        --headerFooterColor: #0f0;
+        --linkColor: #0f0;
+    }
     a:link {
         color: var(--linkColor);
     }
