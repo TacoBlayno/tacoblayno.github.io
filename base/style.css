@@ -1,7 +1,3 @@
-:root {
-    --headerFooterColor: #0f0;
-}
-
 body {
     position: absolute;
     top: 60px;
@@ -54,7 +50,8 @@ p {
 }
 @media (prefers-color-scheme: dark) {
     --headerFooterBackground: #f0f;
-    --linkColor: #0f0;
+    --headerFooterColor: #0f0;
+    --linkColor: 0f0;
 
     a:link {
         color: var(--linkColor);
