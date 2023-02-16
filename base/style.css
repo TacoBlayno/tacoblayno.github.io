@@ -6,6 +6,10 @@ p {
     padding: 21px;
 }
 
+.printer-exclusive {
+    visibility: hidden;
+}
+
 @media (prefers-color-scheme: light) {
 
     body {
@@ -105,5 +109,15 @@ p {
         padding: 20px;
         bottom: 0px;
         width: 100%;
+    }
+}
+
+@media only printer {
+    .printer-hide {
+        visibility: hidden !important;
+    }
+
+    .pronter-exclusive {
+        visibility: visible !important;
     }
 }
