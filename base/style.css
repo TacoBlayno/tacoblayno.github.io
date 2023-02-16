@@ -33,6 +33,12 @@ p {
         text-decoration: none !important;
         background-color: none !important;
     }
+
+    header:visited {
+    color: #fff !important;
+        text-decoration: none !important;
+        background-color: none !important;
+    }
         
     footer {
         background-color: #faf;
@@ -82,6 +88,12 @@ p {
     }
 
     header:link {
+        color: #fff !important;
+        text-decoration: none !important;
+        background-color: none !important;
+    }
+
+    header:visited {
         color: #fff !important;
         text-decoration: none !important;
         background-color: none !important;
