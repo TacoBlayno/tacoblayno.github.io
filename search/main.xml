@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+  <url>/home.html</url>
+  <description>
+  </description>
   <history>
     <url>/history/home.html</url>
+    <description>
+    </description>
     <world-wide-web>
       <url>/history/world_wide_web.html</url>
+      <description>
+      </description>
   </history>
   <minecraft>
     <url>/minecraft/home.html</url>
+    <description>
+    </description>
   </minecraft>
   <game>
+    <url>/game/home.html</url>
+    <description>
+    </description>
   </game>
 </site>
