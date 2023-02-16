@@ -14,6 +14,7 @@ p {
     }
     header {
         position: fixed;
+        color: #0f0;
         width: 100%;
         top: 0px;
         background-color: rgb(255, 100, 250);
@@ -82,7 +83,7 @@ p {
     }
 
     header a:link, header a:visited {
-        color: #fff !important;
+        color: #0f0 !important;
         text-decoration: none !important;
         background-color: none !important;
     }
