@@ -18,11 +18,13 @@
   <minecraft>
     <url>/minecraft/home.html</url>
     <description>
+        This page is the home page for my Minecraft activity. It navigates to Development Packs right now.
     </description>
   </minecraft>
   <game>
     <url>/game/home.html</url>
     <description>
+        This page is hiw to access all of the games developed on this site.
     </description>
   </game>
 </site>
