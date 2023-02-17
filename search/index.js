@@ -15,11 +15,58 @@ function search(value) {
   delete value;
   
   searchElDiv.innerHTML = "";
-  let webPages = retrieveData() /*{
+
+  function searchTags(values) {
+    let xmlDoc = xml.responseXML;
+    console.log(xmlDoc);
+    searchElDiv = xmlDoc.getElementsByTagName("site");
+  }
+
+  let xmlRequest = new XMLHttpRequest();
+  xmlRequest.addEventListener("load", function (values) {
+    let xmlDoc = this.responseXML;
+    console.log(xmlDoc);
+    //searchElDiv = xmlDoc.getElementsByTagName("site");
+  });
+
+  xmlRequest.open("GET", "https://tacoblayno.github.io/search/information");
+  xmlRequest.send();
+
+  /*function loadXMLDoc() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        searchTags(values, this);
+      }
+    };
+
+    xmlhttp.onerror = () => {
+      console.log("Error while getting XML.");
+    };
+
+    xmlhttp.open("GET", "https://tacoblayno.github.io/search/information.xml");
+    xmlhttp.responseType = "document";
+    xmlhttp.send();
+  }
+
+  loadXMLDoc();
+
+function myFunction(xml) {
+  var x, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("description");
+  for (i = 0; i< x.length; i++) {
+    txt += x[i].childNodes[0].nodeValue + "<br>";
+  }
+  searchElDiv.innerHTML = txt;
+}
+
+  let webPages = retrieveData() {
     Minecraft : minecraftFolder(),
     History : {},
     //"" : {},
-  };*/
+  };
   
   console.log(webPages["Minecraft"]);
   
@@ -64,5 +111,5 @@ function search(value) {
     }
   }
   
-  searchKeys(values, webPages);
+  searchKeys(values, webPages);*/
 }
