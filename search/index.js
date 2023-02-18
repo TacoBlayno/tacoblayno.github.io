@@ -1,6 +1,6 @@
-var searchEl = document.getElementById("search-bar");
-var searchSubmitEl = document.getElementById("search-submit");
-var searchElDiv = document.getElementById("search-div");
+let searchEl = document.getElementById("search-bar");
+let searchSubmitEl = document.getElementById("search-submit");
+let searchElDiv = document.getElementById("search-div");
 
 searchEl.addEventListener("keydown", function(event) {
   if (event.keyCode === 13) {
@@ -11,8 +11,7 @@ searchEl.addEventListener("keydown", function(event) {
 searchSubmitEl.addEventListener("click", function() { search(searchEl.value); });
 
 function search(value) {
-  var values = value.split(" ");
-  delete value;
+  let values = value.split(" ");
   
   searchElDiv.innerHTML = "";
 

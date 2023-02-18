@@ -45,7 +45,7 @@ p {
         border-top: 15px solid #000;
         font-style: italic;
         margin: -10px;
-        padding: 7px;
+        /*padding: 7px;*/
         position: fixed;
         margin-top: 50px;
         padding: 20px;
@@ -104,7 +104,7 @@ p {
         color: var(--headerFooterColor);
         font-style: italic;
         margin: -10px;
-        padding: 7px;
+        /*padding: 7px;*/
         position: fixed;
         margin-top: 50px;
         padding: 20px;
