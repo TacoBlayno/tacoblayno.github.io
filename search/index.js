@@ -19,7 +19,7 @@ function search(value) {
     console.log(xml);
     let xmlDoc = xml.responseXML;
     console.log(xmlDoc);
-    searchElDiv.innerHTML = xmlDoc.getElementsByTagName("site");
+    searchElDiv.appendChild((document.createTextNode(xmlDoc.getElementsByTagName("site"))));
   }
 
   let xmlRequest = new XMLHttpRequest();
