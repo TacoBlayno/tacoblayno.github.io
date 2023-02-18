@@ -17,21 +17,20 @@ function search(value) {
   searchElDiv.innerHTML = "";
 
   function searchTags(values, xml) {
-      if (this.readyState == 4 && this.status == 200) {
-      console.log(xml);
-      let xmlDoc = xml.responseXML;
-      console.log(xmlDoc);
-      searchElDiv = xmlDoc.getElementsByTagName("site");
-    }
+    console.log(xml);
+    let xmlDoc = xml.responseXML;
+    console.log(xmlDoc);
+    searchElDiv = xmlDoc.getElementsByTagName("site");
+    
   }
 
   let xmlRequest = new XMLHttpRequest();
   console.log(xmlRequest);
-  xmlRequest.addEventListener("load", searchTags(values, xmlRequest) /*function (values) {
-    let xmlDoc = this.responseXML;
-    console.log(xmlDoc);
-    //searchElDiv = xmlDoc.getElementsByTagName("site");
-  }*/);
+  xmlRequest.addEventListener("load", function (values) {
+    if (this.readyState == 4 && this.status == 200) {
+      searchTags(values, xmlRequest);
+    }
+  });
 
   xmlRequest.open("GET", "https://tacoblayno.github.io/search/information");
   xmlRequest.send();
