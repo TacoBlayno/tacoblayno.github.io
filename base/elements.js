@@ -5,10 +5,8 @@ headerAEl.src = "/home.html"
 headerEl.appendChild(headerAEl);
 document.body.appendChild(headerEl);
 
-function bodyLoaded() {
-  let footerEl = document.createElement("footer");
-  let thanksEl = this.document.createElement("a");
-  thanksEl.appendChild(document.createTextNode("Thanks"));
-  footerEl.appendChild(thanksEl);
-  document.body.appendChild(footerEl);
-}
+let footerEl = document.createElement("footer");
+let thanksEl = this.document.createElement("a");
+thanksEl.appendChild(document.createTextNode("Thanks"));
+footerEl.appendChild(thanksEl);
+document.body.appendChild(footerEl);
