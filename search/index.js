@@ -19,8 +19,7 @@ function search(value) {
     console.log(xml);
     let xmlDoc = xml.responseXML;
     console.log(xmlDoc);
-    searchElDiv = xmlDoc.getElementsByTagName("site");
-    
+    searchElDiv.innerHTML = xmlDoc.getElementsByTagName("site");
   }
 
   let xmlRequest = new XMLHttpRequest();
