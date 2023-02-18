@@ -8,20 +8,20 @@ searchEl.addEventListener("keydown", function(event) {
   };
 });
 
-searchSubmitEl.addEventListener("click", function() { document.write(); });
+searchSubmitEl.addEventListener("click", function() { search(searchEl.value); });
 
 function search(value) {
   var values = value.split(" ");
   delete value;
   
   searchElDiv.innerHTML = "";
-
+/*
   function searchTags(values) {
-    let xmlDoc = xml.responseXML;
+    let xmlDoc = this.responseXML;
     console.log(xmlDoc);
     searchElDiv = xmlDoc.getElementsByTagName("site");
   }
-
+*/
   let xmlRequest = new XMLHttpRequest();
   xmlRequest.addEventListener("load", function (values) {
     let xmlDoc = this.responseXML;
