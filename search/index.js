@@ -15,19 +15,19 @@ function search(value) {
   delete value;
   
   searchElDiv.innerHTML = "";
-/*
-  function searchTags(values) {
+
+  function searchTags(values, xml) {
     let xmlDoc = this.responseXML;
     console.log(xmlDoc);
     searchElDiv = xmlDoc.getElementsByTagName("site");
   }
-*/
+
   let xmlRequest = new XMLHttpRequest();
-  xmlRequest.addEventListener("load", function (values) {
+  xmlRequest.addEventListener("load", searchTags(values, this) /*function (values) {
     let xmlDoc = this.responseXML;
     console.log(xmlDoc);
     //searchElDiv = xmlDoc.getElementsByTagName("site");
-  });
+  }*/);
 
   xmlRequest.open("GET", "https://tacoblayno.github.io/search/information");
   xmlRequest.send();
