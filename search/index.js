@@ -24,7 +24,8 @@ function search(value) {
   }
 
   let xmlRequest = new XMLHttpRequest();
-  xmlRequest.addEventListener("load", searchTags(values, this) /*function (values) {
+  console.log(xmlRequest);
+  xmlRequest.addEventListener("load", searchTags(values, xmlRequest) /*function (values) {
     let xmlDoc = this.responseXML;
     console.log(xmlDoc);
     //searchElDiv = xmlDoc.getElementsByTagName("site");
