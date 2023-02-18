@@ -17,7 +17,7 @@ function search(value) {
   searchElDiv.innerHTML = "";
 
   function searchTags(values, xml) {
-    let xmlDoc = this.responseXML;
+    let xmlDoc = xml.responseXML;
     console.log(xmlDoc);
     searchElDiv = xmlDoc.getElementsByTagName("site");
   }
