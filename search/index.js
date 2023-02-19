@@ -58,11 +58,12 @@ function search(value) {
 }
 
 function viewAll() {
+  let displayTags;
   let xmlRequest = new XMLHttpRequest();
   console.log(xmlRequest);
   xmlRequest.addEventListener("load", function (values) {
     if (this.readyState == 4 && this.status == 200) {
-      DisplayTags(xmlRequest.responseXML);
+      displayTags = new DisplayTags(xmlRequest.responseXML);
     }
   });
 
