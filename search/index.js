@@ -1,35 +1,38 @@
 class DisplayTags {
   constructor(xmlDoc) {
     this._xmlDoc = xmlDoc;
-    //this._getPagesValues start
-    this._getPagesValues = function (xmlDoc) {
-      let map = new Map();
-      if (xmlDoc.childNodes.length > 1) {
-        let array = [];
-        for (const element of xmlDoc.childNodes) {
-          if (element.nodeType == 1) {
-            array.push(this._getPagesValues(element));
-          }
-        }
-        map.set(xmlDoc, array);
-      } else {
-        if (xmlDoc.firstChild.nodeType == 3) {
-          map.set(xmlDoc, xmlDoc.firstChild);
-        } else if (xmlDoc.firstChild.nodeType == 1) {
-          map.set(xmlDoc, this._getPagesValues(xmlDoc.firstChild));
+    this._outputPlace = outputPlace;
+    this._pages = pagesValues(this._xmlDoc.documentElement);
+    console.log(this._pages);
+  }
+  get pagesValues() {
+    return this._pages;
+  }
+  set pagesValues(xmlDoc) {
+    let map = new Map();
+    if (xmlDoc.childNodes.length > 1) {
+      let array = [];
+      for (const element of xmlDoc.childNodes) {
+        if (element.nodeType == 1) {
+          array.push(this._getPagesValues(element));
         }
       }
-      return map;
+      map.set(xmlDoc, array);
+    } else {
+      if (xmlDoc.firstChild.nodeType == 3) {
+        map.set(xmlDoc, xmlDoc.firstChild);
+      } else if (xmlDoc.firstChild.nodeType == 1) {
+        map.set(xmlDoc, this._getPagesValues(xmlDoc.firstChild));
+      }
     }
-    //this._getPagesValues end
-    this._pages = this._getPagesValues(this._xmlDoc.documentElement);
-    console.log(this._pages);
+    return map;
   }
 }
 
 let searchEl = document.getElementById("search-bar");
 let viewAllEl = document.getElementById("view-all");
 let searchElDiv = document.getElementById("search-div");
+let veiwAlElDiv = document.getElementById("view-all-div");
 
 searchEl.addEventListener("keydown", function(event) {
   search(searchEl.value); });
