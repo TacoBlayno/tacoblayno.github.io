@@ -1,7 +1,6 @@
 class DisplayTags {
   constructor(xmlDoc) {
     this._xmlDoc = xmlDoc;
-    this._outputPlace = outputPlace;
     this._pages = pagesValues(this._xmlDoc.documentElement);
     console.log(this._pages);
   }
