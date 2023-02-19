@@ -5,9 +5,9 @@ class DisplayTags {
     this._getPagesValues = function (xmlDoc) {
       let map = new Map();
       if (xmlDoc.childNodes.length > 1) {
-        for (let i = 0; i < xmlDoc.childNodes.length; i++) {
-          if (xmlDoc.childNodes[i].nodeType == 1) {
-            map.set(xmlDoc, this._getPagesValues(xmlDoc.childNodes[i]));
+        for (const element of xmlDoc.childNodes) {
+          if (element.nodeType == 1) {
+            map.set(xmlDoc, this._getPagesValues(element));
           }
         }
       } else {
