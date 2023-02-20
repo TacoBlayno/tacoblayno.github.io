@@ -58,6 +58,13 @@ p {
         --headerFooterBackground: #f0f;
         --headerFooterColor: #0f0;
         --linkColor: #0f0;
+        --ulColor: #0f0;
+        --backgroundColor: #000;
+    }
+    ul {
+        border-left: 5px solid var(--ulColor);
+        list-style-type: none;
+        padding: 10px 20px;
     }
     a:link {
         color: var(--linkColor);
@@ -72,7 +79,7 @@ p {
         background-color: #fff;
     }
     body {
-        background-color: #000;
+        background-color: var(--backgroundColor);
         color: #fff;
     }
     header {
