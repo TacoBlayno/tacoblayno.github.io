@@ -70,12 +70,12 @@ function mapFolder(map) {
                         }
                     } else if (typeof value == "string") {
                         console.log("} else if (typeof value == \"string\") {");
-                        liEl.appendChild(value);
+                        liEl.appendChild(document.createTextNode(value));
                     }
                 } else {
                     console.log("} else {");
                     liEl.style.borderLeft = "none";
-                    for (const i = 1; i < liEl.children; i++) {
+                    for (let i = 1; i < liEl.children.length; i++) {
                         liEl.removeChild(liEl.children[i]);
                     }
                 }
