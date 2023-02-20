@@ -55,12 +55,13 @@ function mapFolder(map) {
             let ulEl = document.createElement("ul");
             let liEl = document.createElement("li");
             liEl.appendChild(document.createTextNode(key));
+            liEl.style.borderLeft = "none";
             liEl.addEventListener("mouseup", function() {
                 if (liEl.style.borderLeft == "none") {
                     console.log("if (liEl.style.borderLeft != \"none\") {");
                     liEl.style.borderLeft = "3px solid #f0f";
-                    console.log(key);
-                    console.log(value);
+                    console.log(key + "key");
+                    console.log(value + "value");
                     if (Array.isArray(value)) {
                         console.log("if (Array.isArray(value)) {");
                         liEl.appendChild(mapFolder(key));
