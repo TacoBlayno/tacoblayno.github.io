@@ -59,6 +59,8 @@ function mapFolder(map) {
                 if (liEl.style.borderLeft == "none") {
                     console.log("if (liEl.style.borderLeft != \"none\") {");
                     liEl.style.borderLeft = "3px solid #f0f";
+                    console.log(key);
+                    console.log(value);
                     if (Array.isArray(value)) {
                         console.log("if (Array.isArray(value)) {");
                         liEl.appendChild(mapFolder(key));
