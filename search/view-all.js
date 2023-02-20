@@ -2,19 +2,30 @@ class DisplayTags {
     constructor(xmlDoc) {
         this._xmlDoc = xmlDoc;
         this._pagesValues = function(xmlDoc) {
+            console.log("this._pagesValues = function(xmlDoc) {");
             let map = new Map();
             if (xmlDoc.childNodes.length > 1) {
+                console.log("if (xmlDoc.childNodes.length > 1) {");
                 let array = [];
                 for (const element of xmlDoc.childNodes) {
                     if (element.nodeType == 1) {
+                        console.log("if (element.nodeType == 1) {");
+                        console.log(element);
                         array.push(this._pagesValues(element));
                     }
                 }
+                console.log(xmlDoc);
+                console.log(array);
                 map.set(xmlDoc, array);
             } else {
+                console.log("} else {");
                 if (xmlDoc.firstChild.nodeType == 3) {
+                    console.log("if (xmlDoc.firstChild.nodeType == 3) {");
+                    console.log(xmlDoc);
+                    console.log(xmlDoc.firstChild);
                     map.set(xmlDoc, xmlDoc.firstChild);
                 } else if (xmlDoc.firstChild.nodeType == 1) {
+                    console.log("} else if (xmlDoc.firstChild.nodeType == 1) {");
                     map.set(xmlDoc, [this._pagesValues(xmlDoc.firstChild)]);
                 }
             }
