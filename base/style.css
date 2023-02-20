@@ -55,39 +55,43 @@ p {
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --headerFooterBackground: #f0f;
-        --headerFooterColor: #0f0;
-        --linkColor: #0f0;
-        --ulColor: #0f0;
-        --backgroundColor: #000;
+        --header-footer-background: #f0f;
+        --header-footer-color: #0f0;
+        --link-color: #0f0;
+        --visited-color: #0af;
+        --hover-color: #fff;
+        --active-background-color: #fff;
+        --ul-color: #0f0;
+        --background-color: #000;
+        --color: #fff;
     }
     ul {
-        border-left: 5px solid var(--ulColor);
+        border-left: 5px solid var(--ul-color);
         list-style-type: none;
         padding: 10px 20px;
     }
     a:link {
-        color: var(--linkColor);
+        color: var(--link-color);
     }
     a:visited {
-        color: #0af;
+        color: var(--visited-color);
     }
     a:hover {
-        color: #fff;
+        color: var(--hover-color);
     }
     a:active {
-        background-color: #fff;
+        background-color: var(--active-background-color);
     }
     body {
-        background-color: var(--backgroundColor);
-        color: #fff;
+        background-color: var(--background-color);
+        color: var(--color);
     }
     header {
         position: fixed;
-        color: var(--headerFooterColor);
+        color: var(--header-footer-color);
         width: 100%;
         top: 0px;
-        background-color: var(--headerFooterBackground);
+        background-color: var(--header-footer-background);
         border-bottom: 15px solid #0f0;
         font-style: italic;
         font-size: 50px;
@@ -100,15 +104,15 @@ p {
     }
 
     header a:link, header a:visited {
-        color: var(--headerFooterColor) !important;
+        color: var(--header-footer-color) !important;
         text-decoration: none !important;
         background-color: none !important;
     }
         
     footer {
-        background-color: var(--headerFooterBackground);
-        border-top: 15px solid var(--headerFooterColor);
-        color: var(--headerFooterColor);
+        background-color: var(--header-footer-background);
+        border-top: 15px solid var(--header-footer-color);
+        color: var(--header-footer-color);
         font-style: italic;
         margin: -10px;
         /*padding: 7px;*/
