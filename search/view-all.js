@@ -10,12 +10,12 @@ class DisplayTags {
                         array.push(this._pagesValues(element));
                     }
                 }
-                map.set(xmlDoc, array);
+                map.set(new String(xmlDoc), array);
             } else {
                 if (xmlDoc.firstChild.nodeType == 3) {
-                    map.set(xmlDoc, xmlDoc.firstChild);
+                    map.set(new String(xmlDoc), xmlDoc.firstChild);
                 } else if (xmlDoc.firstChild.nodeType == 1) {
-                    map.set(xmlDoc, [this._pagesValues(xmlDoc.firstChild)]);
+                    map.set(new String(xmlDoc), [this._pagesValues(xmlDoc.firstChild)]);
                 }
             }
             return map;
