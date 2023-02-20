@@ -62,9 +62,9 @@ function mapFolder(map) {
                     liEl.style.borderLeft = "3px solid #f0f";
                     console.log(key + "key");
                     console.log(value + "value");
-                    value.array.forEach(element => {
+                    for(const element of value) {
                         console.log(element);
-                    });
+                    }
                     if (Array.isArray(value)) {
                         console.log("if (Array.isArray(value)) {");
                         liEl.appendChild(mapFolder(key));
@@ -75,7 +75,7 @@ function mapFolder(map) {
                 } else {
                     console.log("} else {");
                     liEl.style.borderLeft = "none";
-                    for (let i = 1; i < liEl.children; i++) {
+                    for (const i = 1; i < liEl.children; i++) {
                         liEl.removeChild(liEl.children[i]);
                     }
                 }
