@@ -51,8 +51,8 @@ function mapFolder(map) {
     console.log(map);
     if (map.entries) {
         console.log("if (map.entries) {")
+        let ulEl = document.createElement("ul");
         for (const [key, value] of map.entries()) {
-            let ulEl = document.createElement("ul");
             let liEl = document.createElement("li");
             liEl.appendChild(document.createTextNode(key));
             liEl.style.borderLeft = "none";
@@ -71,6 +71,7 @@ function mapFolder(map) {
                     } else if (typeof value == "string") {
                         console.log("} else if (typeof value == \"string\") {");
                         liEl.appendChild(document.createTextNode(value));
+                        console.log(liEl);
                     }
                 } else {
                     console.log("} else {");
