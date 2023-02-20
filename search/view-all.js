@@ -36,7 +36,7 @@ let viewAllEl = document.getElementById("view-all");
 let viewAllElDiv = document.getElementById("view-all-div");
 
 function mapFolder(map) {
-    for (const [key, value] of map.entries()) {
+    for (const [key, value] of map.entries) {
         let ulEl = document.createElement("ul");
         let liEl = document.createElement("li");
         liEl.appendChild(document.createTextNode(key));
