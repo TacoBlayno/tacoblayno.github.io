@@ -10,12 +10,12 @@ class DisplayTags {
                         array.push(this._pagesValues(element));
                     }
                 }
-                map.set(new String(xmlDoc), array);
+                map.set(xmlDoc, array);
             } else {
                 if (xmlDoc.firstChild.nodeType == 3) {
-                    map.set(new String(xmlDoc), xmlDoc.firstChild);
+                    map.set(xmlDoc, xmlDoc.firstChild);
                 } else if (xmlDoc.firstChild.nodeType == 1) {
-                    map.set(new String(xmlDoc), [this._pagesValues(xmlDoc.firstChild)]);
+                    map.set(xmlDoc, [this._pagesValues(xmlDoc.firstChild)]);
                 }
             }
             return map;
@@ -36,6 +36,7 @@ let viewAllEl = document.getElementById("view-all");
 let viewAllElDiv = document.getElementById("view-all-div");
 
 function mapFolder(map) {
+    console.log(map);
     for (const [key, value] of map.entries()) {
         let ulEl = document.createElement("ul");
         let liEl = document.createElement("li");
