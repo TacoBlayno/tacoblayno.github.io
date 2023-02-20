@@ -47,28 +47,37 @@ let viewAllEl = document.getElementById("view-all");
 let viewAllElDiv = document.getElementById("view-all-div");
 
 function mapFolder(map) {
+    console.log("function mapFolder(map) {")
     console.log(map);
-    for (const [key, value] of map.entries()) {
-        let ulEl = document.createElement("ul");
-        let liEl = document.createElement("li");
-        liEl.appendChild(document.createTextNode(key));
-        liEl.addEventListener("mouseup", function() {
-        if (liEl.style.borderLeft != "none") {
-            liEl.style.borderLeft = "3px solid #f0f";
-            if (Array.isArray(value)) {
-                liEl.appendChild(mapFolder(key));
-            } else if (typeof value == "string") {
-                liEl.appendChild(value);
-            }
-        } else {
-            liEl.style.borderLeft = "none";
-            for (let i = 1; i < liEl.children; i++) {
-                liEl.removeChild(liEl.children[i]);
-            }
-        }
-    });
+    if (map.entries) {
+        console.log("if (map.entries) {")
+        for (const [key, value] of map.entries()) {
+            let ulEl = document.createElement("ul");
+            let liEl = document.createElement("li");
+            liEl.appendChild(document.createTextNode(key));
+            liEl.addEventListener("mouseup", function() {
+                if (liEl.style.borderLeft == "none") {
+                    console.log("if (liEl.style.borderLeft != \"none\") {");
+                    liEl.style.borderLeft = "3px solid #f0f";
+                    if (Array.isArray(value)) {
+                        console.log("if (Array.isArray(value)) {");
+                        liEl.appendChild(mapFolder(key));
+                    } else if (typeof value == "string") {
+                        console.log("} else if (typeof value == \"string\") {");
+                        liEl.appendChild(value);
+                    }
+                } else {
+                    console.log("} else {");
+                    liEl.style.borderLeft = "none";
+                    for (let i = 1; i < liEl.children; i++) {
+                        liEl.removeChild(liEl.children[i]);
+                    }
+                }
+            });
+
         ulEl.appendChild(liEl);
         return ulEl;
+        }
     }
 }
 
