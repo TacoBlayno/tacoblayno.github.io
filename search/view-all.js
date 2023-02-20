@@ -62,9 +62,6 @@ function mapFolder(map) {
                     liEl.style.borderLeft = "3px solid #f0f";
                     console.log(key + "key");
                     console.log(value + "value");
-                    for (const element of value) {
-                        console.log(element);
-                    }
                     if (Array.isArray(value)) {
                         console.log("if (Array.isArray(value)) {");
                         //liEl.appendChild(mapFolder(key));
