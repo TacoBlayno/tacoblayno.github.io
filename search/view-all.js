@@ -62,12 +62,15 @@ function mapFolder(map) {
                     liEl.style.borderLeft = "3px solid #f0f";
                     console.log(key + "key");
                     console.log(value + "value");
-                    for(const element of value) {
+                    for (const element of value) {
                         console.log(element);
                     }
                     if (Array.isArray(value)) {
                         console.log("if (Array.isArray(value)) {");
-                        liEl.appendChild(mapFolder(key));
+                        //liEl.appendChild(mapFolder(key));
+                        for (const element of value) {
+                            liEl.appendChild(mapFolder(element));
+                        }
                     } else if (typeof value == "string") {
                         console.log("} else if (typeof value == \"string\") {");
                         liEl.appendChild(value);
