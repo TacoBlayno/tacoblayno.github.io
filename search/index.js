@@ -7,7 +7,7 @@ class DisplayTags {
         let array = [];
         for (const element of xmlDoc.childNodes) {
           if (element.nodeType == 1) {
-            array.push(this._getPagesValues(element));
+            array.push(this._pagesValues(element));
           }
         }
         map.set(xmlDoc, array);
@@ -15,7 +15,7 @@ class DisplayTags {
         if (xmlDoc.firstChild.nodeType == 3) {
           map.set(xmlDoc, xmlDoc.firstChild);
         } else if (xmlDoc.firstChild.nodeType == 1) {
-          map.set(xmlDoc, [this._getPagesValues(xmlDoc.firstChild)]);
+          map.set(xmlDoc, [this._pagesValues(xmlDoc.firstChild)]);
         }
       }
       return map;
