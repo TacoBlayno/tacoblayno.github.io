@@ -74,11 +74,11 @@ function mapFolder(map) {
                         console.log(liEl);
                     }
                 } else {
-                    console.log("} else {");
+                    console.log("} else {");/*
                     liEl.style.borderLeft = "none";
                     for (let i = 1; i < liEl.children.length; i++) {
                         liEl.removeChild(liEl.children[i]);
-                    }
+                    }*/
                 }
             });
 
