@@ -37,17 +37,17 @@ let searchElDiv = document.getElementById("search-div");
 let viewAllElDiv = document.getElementById("view-all-div");
 
 function mapFolder(map) {
-  for (const element of map.keys()) {
+  for (const [key, value] of map.entries()) {
     let ulEl = document.createElement("ul");
     let liEl = document.createElement("li");
-    liEl.appendChild(document.createTextNode(element));
+    liEl.appendChild(document.createTextNode(key));
     liEl.addEventListener("mouseup", function() {
       if (liEl.style.borderLeft != "none") {
         liEl.style.borderLeft = "3px solid #f0f";
-        if (Array.isArray(map.get(element))) {
-          liEl.appendChild(mapFolder(element));
-        } else if (typeof map.get(element) == "string") {
-          liEl.appendChild(map.get(element));
+        if (Array.isArray(value)) {
+          liEl.appendChild(mapFolder(key));
+        } else if (typeof value == "string") {
+          liEl.appendChild(value);
         }
       } else {
         liEl.style.borderLeft = "none";
