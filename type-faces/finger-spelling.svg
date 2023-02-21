@@ -1,77 +1,74 @@
 <svg>
-    <font id="finger-spelling" horiz-adv-x="1000">
-        <font-face
-            font-family="finger spelling"
-            font-style="normal"
-            font-weight="normal"
-         />
-        <missing-glyph></missing-glyph>
-        <glyph unicode=" ">
-    <path d="M 53.8 42.8 q 6.4 -3 -2 -4.1" />
-    <path d="M 4.5 38 c 1 -30 51 -32 52 3" />
-    </glyph>
-        <glyph unicode="A"></glyph>
-        <glyph unicode="B"></glyph>
-        <glyph unicode="C"></glyph>
-        <glyph unicode="D"></glyph>
-        <glyph unicode="E"></glyph>
-        <glyph unicode="F"></glyph>
-        <glyph unicode="G"></glyph>
-        <glyph unicode="H"></glyph>
-        <glyph unicode="I"></glyph>
-        <glyph unicode="J"></glyph>
-        <glyph unicode="K"></glyph>
-        <glyph unicode="L"></glyph>
-        <glyph unicode="M"></glyph>
-        <glyph unicode="N"></glyph>
-        <glyph unicode="O"></glyph>
-        <glyph unicode="P"></glyph>
-        <glyph unicode="Q"></glyph>
-        <glyph unicode="R"></glyph>
-        <glyph unicode="S"></glyph>
-        <glyph unicode="T"></glyph>
-        <glyph unicode="U"></glyph>
-        <glyph unicode="V"></glyph>
-        <glyph unicode="W"></glyph>
-        <glyph unicode="X"></glyph>
-        <glyph unicode="Y"></glyph>
-        <glyph unicode="Z"></glyph>
-        <glyph unicode="a">
-    <path d="M 53.8 42.8 q 6.4 -3 -2 -4.1" />
-    <path d="M 4.5 38 c 1 -30 51 -32 52 3" /></glyph>
-        <glyph unicode="b"></glyph>
-        <glyph unicode="c"></glyph>
-        <glyph unicode="d"></glyph>
-        <glyph unicode="f"></glyph>
-        <glyph unicode="e"></glyph>
-        <glyph unicode="g"></glyph>
-        <glyph unicode="h"></glyph>
-        <glyph unicode="i"></glyph>
-        <glyph unicode="j"></glyph>
-        <glyph unicode="k"></glyph>
-        <glyph unicode="l"></glyph>
-        <glyph unicode="m"></glyph>
-        <glyph unicode="n"></glyph>
-        <glyph unicode="o"></glyph>
-        <glyph unicode="p"></glyph>
-        <glyph unicode="q"></glyph>
-        <glyph unicode="r"></glyph>
-        <glyph unicode="s"></glyph>
-        <glyph unicode="t"></glyph>
-        <glyph unicode="u"></glyph>
-        <glyph unicode="v"></glyph>
-        <glyph unicode="w"></glyph>
-        <glyph unicode="x"></glyph>
-        <glyph unicode="y"></glyph>
-        <glyph unicode="z"></glyph>
-        <glyph unicode="1"></glyph>
-        <glyph unicode="2"></glyph>
-        <glyph unicode="3"></glyph>
-        <glyph unicode="4"></glyph>
-        <glyph unicode="5"></glyph>
-        <glyph unicode="6"></glyph>
-        <glyph unicode="7"></glyph>
-        <glyph unicode="8"></glyph>
-        <glyph unicode="9"></glyph>
-    </font>
+    <defs>
+        <font id="finger-spelling" horiz-adv-x="1000">
+            <font-face
+                font-family="finger spelling"
+                font-style="normal"
+                font-weight="normal"
+             />
+            <missing-glyph></missing-glyph>
+            <glyph unicode=" "></glyph>
+            <glyph unicode="A"></glyph>
+            <glyph unicode="B"></glyph>
+            <glyph unicode="C"></glyph>
+            <glyph unicode="D"></glyph>
+            <glyph unicode="E"></glyph>
+            <glyph unicode="F"></glyph>
+            <glyph unicode="G"></glyph>
+            <glyph unicode="H"></glyph>
+            <glyph unicode="I"></glyph>
+            <glyph unicode="J"></glyph>
+            <glyph unicode="K"></glyph>
+            <glyph unicode="L"></glyph>
+            <glyph unicode="M"></glyph>
+            <glyph unicode="N"></glyph>
+            <glyph unicode="O"></glyph>
+            <glyph unicode="P"></glyph>
+            <glyph unicode="Q"></glyph>
+            <glyph unicode="R"></glyph>
+            <glyph unicode="S"></glyph>
+            <glyph unicode="T"></glyph>
+            <glyph unicode="U"></glyph>
+            <glyph unicode="V"></glyph>
+            <glyph unicode="W"></glyph>
+            <glyph unicode="X"></glyph>
+            <glyph unicode="Y"></glyph>
+            <glyph unicode="Z"></glyph>
+            <glyph unicode="a"></glyph>
+            <glyph unicode="b"></glyph>
+            <glyph unicode="c"></glyph>
+            <glyph unicode="d"></glyph>
+            <glyph unicode="f"></glyph>
+            <glyph unicode="e"></glyph>
+            <glyph unicode="g"></glyph>
+            <glyph unicode="h"></glyph>
+            <glyph unicode="i"></glyph>
+            <glyph unicode="j"></glyph>
+            <glyph unicode="k"></glyph>
+            <glyph unicode="l"></glyph>
+            <glyph unicode="m"></glyph>
+            <glyph unicode="n"></glyph>
+            <glyph unicode="o"></glyph>
+            <glyph unicode="p"></glyph>
+            <glyph unicode="q"></glyph>
+            <glyph unicode="r"></glyph>
+            <glyph unicode="s"></glyph>
+            <glyph unicode="t"></glyph>
+            <glyph unicode="u"></glyph>
+            <glyph unicode="v"></glyph>
+            <glyph unicode="w"></glyph>
+            <glyph unicode="x"></glyph>
+            <glyph unicode="y"></glyph>
+            <glyph unicode="z"></glyph>
+            <glyph unicode="1"></glyph>
+            <glyph unicode="2"></glyph>
+            <glyph unicode="3"></glyph>
+            <glyph unicode="4"></glyph>
+            <glyph unicode="5"></glyph>
+            <glyph unicode="6"></glyph>
+            <glyph unicode="7"></glyph>
+            <glyph unicode="8"></glyph>
+            <glyph unicode="9"></glyph>
+        </font>
+    </defs>
 </svg>
