@@ -6,14 +6,10 @@
             font-weight="normal"
          />
         <missing-glyph></missing-glyph>
-        <glyph unicode=" "><g id="shell-back">
+        <glyph unicode=" ">
     <path d="M 53.8 42.8 q 6.4 -3 -2 -4.1" />
     <path d="M 4.5 38 c 1 -30 51 -32 52 3" />
-  </g>
-  <g id="shell-front">
-  <path d="M 2 40 c 1 -30 51 -32 52 3" />
-  <line x1="2" y1="39.6" x2="54" y2="42.8" />
-  </g></glyph>
+    </glyph>
         <glyph unicode="A"></glyph>
         <glyph unicode="B"></glyph>
         <glyph unicode="C"></glyph>
@@ -40,6 +36,34 @@
         <glyph unicode="X"></glyph>
         <glyph unicode="Y"></glyph>
         <glyph unicode="Z"></glyph>
+        <glyph unicode="a">
+    <path d="M 53.8 42.8 q 6.4 -3 -2 -4.1" />
+    <path d="M 4.5 38 c 1 -30 51 -32 52 3" /></glyph>
+        <glyph unicode="b"></glyph>
+        <glyph unicode="c"></glyph>
+        <glyph unicode="d"></glyph>
+        <glyph unicode="f"></glyph>
+        <glyph unicode="e"></glyph>
+        <glyph unicode="g"></glyph>
+        <glyph unicode="h"></glyph>
+        <glyph unicode="i"></glyph>
+        <glyph unicode="j"></glyph>
+        <glyph unicode="k"></glyph>
+        <glyph unicode="l"></glyph>
+        <glyph unicode="m"></glyph>
+        <glyph unicode="n"></glyph>
+        <glyph unicode="o"></glyph>
+        <glyph unicode="p"></glyph>
+        <glyph unicode="q"></glyph>
+        <glyph unicode="r"></glyph>
+        <glyph unicode="s"></glyph>
+        <glyph unicode="t"></glyph>
+        <glyph unicode="u"></glyph>
+        <glyph unicode="v"></glyph>
+        <glyph unicode="w"></glyph>
+        <glyph unicode="x"></glyph>
+        <glyph unicode="y"></glyph>
+        <glyph unicode="z"></glyph>
         <glyph unicode="1"></glyph>
         <glyph unicode="2"></glyph>
         <glyph unicode="3"></glyph>
