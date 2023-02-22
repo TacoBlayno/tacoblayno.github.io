@@ -54,7 +54,8 @@ function mapFolder(map) {
         let ulEl = document.createElement("ul");
         for (const [key, value] of map.entries()) {
             let liEl = document.createElement("li");
-            liEl.appendChild(document.createTextNode(key.name));
+            console.log(key.name);
+            liEl.appendChild(document.createTextNode(key));
             liEl.style.borderLeft = "none";
             liEl.addEventListener("mouseup", function() {
                 if (liEl.style.borderLeft == "none") {
@@ -66,11 +67,14 @@ function mapFolder(map) {
                         console.log("if (Array.isArray(value)) {");
                         //liEl.appendChild(mapFolder(key));
                         for (const element of value) {
-                            liEl.appendChild(mapFolder(element.nodeValue | element.name));
+                            console.log(element.name);
+                            console.log(element.nodeValue);
+                            liEl.appendChild(mapFolder(element);
                         }
                     } else if (typeof value == "string") {
                         console.log("} else if (typeof value == \"string\") {");
-                        liEl.appendChild(document.createTextNode(value.nodeValue));
+                        console.log(value.nodeValue);
+                        liEl.appendChild(document.createTextNode(value));
                         console.log(liEl);
                     }
                 } else {
