@@ -54,23 +54,23 @@ function mapFolder(map) {
         let ulEl = document.createElement("ul");
         for (const [key, value] of map.entries()) {
             let liEl = document.createElement("li");
-            liEl.appendChild(document.createTextNode(key));
+            liEl.appendChild(document.createTextNode(key.name));
             liEl.style.borderLeft = "none";
             liEl.addEventListener("mouseup", function() {
                 if (liEl.style.borderLeft == "none") {
                     console.log("if (liEl.style.borderLeft != \"none\") {");
                     liEl.style.borderLeft = "3px solid #f0f";
-                    console.log(key + "key");
-                    console.log(value + "value");
+                    console.log(key.name + "key");
+                    console.log(value.nodeValue + "value");
                     if (Array.isArray(value)) {
                         console.log("if (Array.isArray(value)) {");
                         //liEl.appendChild(mapFolder(key));
                         for (const element of value) {
-                            liEl.appendChild(mapFolder(element));
+                            liEl.appendChild(mapFolder(element.nodeValue | element.name));
                         }
                     } else if (typeof value == "string") {
                         console.log("} else if (typeof value == \"string\") {");
-                        liEl.appendChild(document.createTextNode(value));
+                        liEl.appendChild(document.createTextNode(value.nodeValue));
                         console.log(liEl);
                     }
                 } else {
