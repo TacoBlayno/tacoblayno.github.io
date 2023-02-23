@@ -106,3 +106,5 @@ function viewAll() {
     xmlRequest.open("GET", "https://tacoblayno.github.io/search/information");
     xmlRequest.send();
 }
+
+viewAllEl.addEventListener("click", viewAll);
