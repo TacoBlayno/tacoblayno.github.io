@@ -4,8 +4,6 @@ let searchElDiv = document.getElementById("search-div");
 searchEl.addEventListener("keydown", function(event) {
   search(searchEl.value); });
 
-viewAllEl.addEventListener("click", viewAll);
-
 function search(value) {
   let values = value.split(" ");
   
