@@ -1,3 +1,5 @@
+console.log("Script loading");
+
 class DisplayTags {
     constructor(xmlDoc) {
         this._xmlDoc = xmlDoc;
@@ -108,3 +110,4 @@ function viewAll() {
 }
 
 viewAllEl.addEventListener("click", viewAll);
+console.log("Script loaded");
