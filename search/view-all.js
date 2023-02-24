@@ -71,7 +71,7 @@ function mapFolder(map) {
                         for (const element of value) {
                             console.log(element.name);
                             console.log(element.nodeValue);
-                            liEl.appendChild(mapFolder(element);
+                            liEl.appendChild(mapFolder(element));
                         }
                     } else if (typeof value == "string") {
                         console.log("} else if (typeof value == \"string\") {");
