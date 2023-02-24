@@ -1,3 +1,17 @@
+<!--
+    <svg style="border: 3px solid; padding: 3px; position: absolute; top: 100px; left: 100px;">
+        <defs>
+            <g id="finger">
+                <path d="M 10 45 l 0 -5 a 15,20 0,0,1 50,0 l 0 5 m -5 0 l -40 0 l 0 -5 a 15,20 0,0,1 40,0 l 0 5 M 10 45" fill="none" stroke="#000" />
+            </g>    
+            <g id="hand">
+                <use href="#finger" />
+            </g>
+        </defs>
+        <use href="#hand" />
+    </svg>
+-->
+
 <svg>
     <defs>
         <font id="finger-spelling" horiz-adv-x="1000">
