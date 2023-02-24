@@ -69,7 +69,7 @@ function mapFolder(map) {
                         console.log("if (Array.isArray(value)) {");
                         //liEl.appendChild(mapFolder(key));
                         for (const element of value) {
-                            console.log(element.name);
+                            console.log(element.nodeName);
                             console.log(element.nodeValue);
                             liEl.appendChild(mapFolder(element));
                         }
