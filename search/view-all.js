@@ -52,7 +52,7 @@ function mapFolder(map) {
     console.log("function mapFolder(map) {")
     console.log(map);
     if (map.entries) {
-        console.log("if (map.entries) {")
+        console.log("if (map.entries) {");
         let ulEl = document.createElement("ul");
         for (const [key, value] of map.entries()) {
             let liEl = document.createElement("li");
@@ -73,10 +73,10 @@ function mapFolder(map) {
                             console.log(element);
                             liEl.appendChild(mapFolder(element));
                         }
-                    } else if (typeof value == "string") {
+                    } else if (typeof value == ("string"||"#text")) {
                         console.log("} else if (typeof value == \"string\") {");
-                        console.log(value);
-                        liEl.appendChild(document.createTextNode(value));
+                        console.log(value.nodeValue);
+                        liEl.appendChild(document.createTextNode(value.nodeValue));
                         console.log(liEl);
                     }
                 } else {
