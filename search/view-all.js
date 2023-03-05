@@ -24,7 +24,7 @@ class DisplayTags {
                 if (xmlDoc.firstChild.nodeType == 3) {
                     console.log("if (xmlDoc.firstChild.nodeType == 3) {");
                     console.log(xmlDoc);
-                    /console.log(xmlDoc.firstChild);
+                    console.log(xmlDoc.firstChild);
                     map.set(xmlDoc, xmlDoc.firstChild);
                 } else if (xmlDoc.firstChild.nodeType == 1) {
                     console.log("} else if (xmlDoc.firstChild.nodeType == 1) {");
