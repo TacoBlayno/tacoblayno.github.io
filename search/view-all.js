@@ -56,26 +56,26 @@ function mapFolder(map) {
         let ulEl = document.createElement("ul");
         for (const [key, value] of map.entries()) {
             let liEl = document.createElement("li");
-            console.log(key.name);
+            console.log(key);
             liEl.appendChild(document.createTextNode(key));
             liEl.style.borderLeft = "none";
             liEl.addEventListener("mouseup", function() {
                 if (liEl.style.borderLeft == "none") {
                     console.log("if (liEl.style.borderLeft != \"none\") {");
                     liEl.style.borderLeft = "3px solid #f0f";
-                    console.log(key.name + "key");
-                    console.log(value.nodeValue + "value");
+                    console.log(key + " key");
+                    console.log(value + " value");
                     if (Array.isArray(value)) {
                         console.log("if (Array.isArray(value)) {");
                         //liEl.appendChild(mapFolder(key));
                         for (const element of value) {
-                            console.log(element.nodeName);
-                            console.log(element.nodeValue);
+                            console.log(element);
+                            console.log(element);
                             liEl.appendChild(mapFolder(element));
                         }
                     } else if (typeof value == "string") {
                         console.log("} else if (typeof value == \"string\") {");
-                        console.log(value.nodeValue);
+                        console.log(value);
                         liEl.appendChild(document.createTextNode(value));
                         console.log(liEl);
                     }
