@@ -16,19 +16,19 @@ class DisplayTags {
                         array.push(this._pagesValues(element));
                     }
                 }
-                console.log(xmlDoc);
+                console.log(xmlDoc.nodeName);
                 console.log(array);
-                map.set(xmlDoc, array);
+                map.set(xmlDoc.nodeName, array);
             } else {
                 console.log("} else {");
                 if (xmlDoc.firstChild.nodeType == 3) {
                     console.log("if (xmlDoc.firstChild.nodeType == 3) {");
                     console.log(xmlDoc);
                     console.log(xmlDoc.firstChild);
-                    map.set(xmlDoc, xmlDoc.firstChild);
+                    map.set(xmlDoc.nodeName, xmlDoc.firstChild);
                 } else if (xmlDoc.firstChild.nodeType == 1) {
                     console.log("} else if (xmlDoc.firstChild.nodeType == 1) {");
-                    map.set(xmlDoc, [this._pagesValues(xmlDoc.firstChild)]);
+                    map.set(xmlDoc.nodeName, [this._pagesValues(xmlDoc.firstChild)]);
                 }
             }
             return map;
