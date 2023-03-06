@@ -101,6 +101,9 @@ function viewAll() {
     xmlRequest.addEventListener("load", function (values) {
         if (this.readyState == 4 && this.status == 200) {
             displayTags = new DisplayTags(xmlRequest.responseXML);
+            for (const element of viewAllElDiv.children) {
+                element.remove();
+            }
             viewAllElDiv.appendChild(mapFolder(displayTags.pages));
         }
     });
