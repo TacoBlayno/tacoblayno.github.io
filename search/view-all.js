@@ -6,7 +6,7 @@ class DisplayTags {
         this._pagesValues = function(xmlDoc) {
             console.log("this._pagesValues = function(xmlDoc) {");
             let map = new Map();
-            if (xmlDoc.childNodes.length > 1) {
+            if (xmlDoc.childNodes.length > 0) {
                 console.log("if (xmlDoc.childNodes.length > 1) {");
                 let array = [];
                 for (const element of xmlDoc.childNodes) {
