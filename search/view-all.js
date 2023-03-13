@@ -80,8 +80,8 @@ function mapFolder(map) {
                         console.log(liEl);
                     }
                 //} else {
-                //    console.log("} else { fjksezr hex");/*
-                    liEl.style.borderLeft = "none";
+                //    console.log("} else { fjksezr hex");
+                    /*liEl.style.borderLeft = "none";
                     for (let i = 1; i < liEl.children.length; i++) {
                         liEl.removeChild(liEl.children[i]);
                     }*/
