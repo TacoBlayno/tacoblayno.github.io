@@ -60,7 +60,7 @@ function mapFolder(map) {
             liEl.appendChild(document.createTextNode(key));
             liEl.style.borderLeft = "none";
             liEl.addEventListener("mouseup", function() {
-                //if (liEl.style.borderLeft == "none") {
+                if (liEl.style.borderLeft == "none") {
                     console.log("if (liEl.style.borderLeft != \"none\") {");
                     liEl.style.borderLeft = "3px solid #f0f";
                     console.log(key);
@@ -79,19 +79,22 @@ function mapFolder(map) {
                         liEl.appendChild(document.createTextNode(value.nodeValue));
                         console.log(liEl);
                     }
-                //} else {
-                //    console.log("} else { fjksezr hex");
+                } else {
+                    console.log("} else { fjksezr hex");
                     /*liEl.style.borderLeft = "none";
                     for (let i = 1; i < liEl.children.length; i++) {
                         liEl.removeChild(liEl.children[i]);
                     }*/
-                //}
+                }
             });
-
-        ulEl.appendChild(liEl);
-        return ulEl;
         }
+    } else {
+        let liEl = document.createElement("li");
+        console.log(key);
+        liEl.appendChild(document.createTextNode(map));
     }
+    ulEl.appendChild(liEl);
+    return ulEl;
 }
 
 function viewAll() {
