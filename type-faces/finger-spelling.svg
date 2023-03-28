@@ -20,8 +20,7 @@
                 font-style="normal"
                 font-weight="normal"
              />
-            <missing-glyph></missing-glyph>
-            <glyph unicode=" "></glyph>
+            <glyph unicode=" "><path d="M 10 45 l 0 -5 a 15,20 0,0,1 50,0 l 0 5 m -5 0 l -40 0 l 0 -5 a 15,20 0,0,1 40,0 l 0 5 M 10 45" fill="none" stroke="#000" /></glyph>
             <glyph unicode="A"></glyph>
             <glyph unicode="B"></glyph>
             <glyph unicode="C"></glyph>
@@ -83,6 +82,7 @@
             <glyph unicode="7"></glyph>
             <glyph unicode="8"></glyph>
             <glyph unicode="9"></glyph>
+            <missing-glyph></missing-glyph>
         </font>
     </defs>
 </svg>
