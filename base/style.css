@@ -133,3 +133,12 @@ p {
         visibility: visible !important;
     }
 }
+
+@font-face {
+    font-family: "finger-spelling";
+    src: url('/type-faces/finger-spelling.svg') format("svg");
+}
+
+p {
+    font-family: "finger-spelling";
+}
