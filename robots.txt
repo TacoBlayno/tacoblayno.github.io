@@ -1,2 +1,2 @@
 Sitemap:
-https://tacoblayno.github.io/sitemap
+https://tacoblayno.github.io/sitemap.xml
