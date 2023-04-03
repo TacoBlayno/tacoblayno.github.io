@@ -1,2 +1,5 @@
+User-Agent: *
+/Allow
+
 Sitemap:
 https://tacoblayno.github.io/sitemap.xml
