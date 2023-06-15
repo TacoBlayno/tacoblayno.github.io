@@ -136,7 +136,7 @@ p {
 
 @font-face {
     font-family: "finger-spelling";
-    src: url('/type-faces/finger-spelling.svg') format("svg");
+    src: url('/type-faces/finger-spelling.svg+xml') format("svg");
 }
 
 p {
