@@ -38,7 +38,9 @@
               fooEl = document.createElement("p");
               fooEl.textContent = itemRssEl.querySelector("description");
               itemEl.appendChild(fooEl);
-          });
+              channelEl.appendChild(itemEl);
+            });
+          document.querySelector("main").appendChild(channelEl);
           });
         });
       </script>
