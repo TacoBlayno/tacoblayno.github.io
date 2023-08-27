@@ -15,7 +15,7 @@
           parser = new DOMParser();
           rss = parser.parseFromString(rss,"text/xml");
           let channelRssEls = rss.querySelectorAll("channel");
-          channelEls.forEach(channelRssEl => {
+          channelRssEls.forEach(channelRssEl => {
             let channelEl = document.createElement("section");
             let fooEl = document.createElement("h2");
             barEl = document.createElement("a");
