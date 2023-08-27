@@ -27,7 +27,7 @@
             fooEl.textContent = channelRssEl.querySelector("description");
             channelEl.appendChild(fooEl);
 
-            channelRssEl.forEach(itemRssEl => {
+            channelRssEl.querySelectorAll("item").forEach(itemRssEl => {
               let itemEl = document.createElement("section");
               let fooEl = document.createElement("h2");
               barEl = document.createElement("a");
