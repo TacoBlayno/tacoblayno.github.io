@@ -26,6 +26,19 @@
             fooEl = document.createElement("p");
             fooEl.textContent = channelRssEl.querySelector("description");
             channelEl.appendChild(fooEl);
+
+            channelRssEl.forEach(itemRssEl => {
+              let itemEl = document.createElement("section");
+              let fooEl = document.createElement("h2");
+              barEl = document.createElement("a");
+              barEl.textContent = itemRssEl.querySelector("title");
+              barEl.href = itemRssEl.querySelector("link");
+              fooEl.appendChild(barEl);
+              itemEl.appendChild(fooEl);
+              fooEl = document.createElement("p");
+              fooEl.textContent = itemRssEl.querySelector("description");
+              itemEl.appendChild(fooEl);
+          });
           });
         });
       </script>
