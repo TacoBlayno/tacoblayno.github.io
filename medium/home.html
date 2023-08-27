@@ -19,24 +19,24 @@
             let channelEl = document.createElement("section");
             let fooEl = document.createElement("h2");
             barEl = document.createElement("a");
-            barEl.textContent = channelRssEl.querySelector("title");
-            barEl.href = channelRssEl.querySelector("link");
+            barEl.textContent = channelRssEl.querySelector("title").textContent;
+            barEl.href = channelRssEl.querySelector("link").textContent;
             fooEl.appendChild(barEl);
             channelEl.appendChild(fooEl);
             fooEl = document.createElement("p");
-            fooEl.textContent = channelRssEl.querySelector("description");
+            fooEl.textContent = channelRssEl.querySelector("description").textContent;
             channelEl.appendChild(fooEl);
 
             channelRssEl.querySelectorAll("item").forEach(itemRssEl => {
               let itemEl = document.createElement("section");
               let fooEl = document.createElement("h2");
               barEl = document.createElement("a");
-              barEl.textContent = itemRssEl.querySelector("title");
-              barEl.href = itemRssEl.querySelector("link");
+              barEl.textContent = itemRssEl.querySelector("title").textContent;
+              barEl.href = itemRssEl.querySelector("link").textContent;
               fooEl.appendChild(barEl);
               itemEl.appendChild(fooEl);
               fooEl = document.createElement("p");
-              fooEl.textContent = itemRssEl.querySelector("description");
+              fooEl.textContent = itemRssEl.querySelector("description").textContent;
               itemEl.appendChild(fooEl);
               channelEl.appendChild(itemEl);
             });
