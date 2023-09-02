@@ -1,0 +1,6 @@
+const Emulator = {
+  cpu: () => {
+    
+  },
+  ram: []
+}
