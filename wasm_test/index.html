@@ -13,7 +13,7 @@
 				},
 			};
 
-			WebAssembly.instantiateStreaming(fetch("main.wasm"), importObject).then(
+			WebAssembly.instantiateStreaming(fetch("./main.wasm"), importObject).then(
 				(obj) => obj.instance.exports.exported_func(),
 			);
 		</script>
