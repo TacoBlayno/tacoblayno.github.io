@@ -7,15 +7,17 @@
 	</head>
 	<body>
 		<script>
-        	const importObject = {
-				imports: {
-					imported_func: (arg) => console.log(arg)
-				},
-			};
-
-			WebAssembly.instantiateStreaming(fetch("./main.wasm"), importObject).then(
-				(obj) => obj.instance.exports.exported_func(),
-			);
+			const table = new WebAssembly.Table({
+				element: "anyfunc",
+				initial: 2,
+				maximum: 10
+			});
+			
+			WebAssembly.instantiateStreaming(fetch("main.wasm")).then(obj => {
+				const tbl = obj.instance.exports.tbl;
+				console.log(tbl.get(0)());  // 13
+				console.log(tbl.get(1)());  // 42
+			});
 		</script>
 	</body>
 </html>
