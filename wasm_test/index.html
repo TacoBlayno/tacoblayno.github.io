@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta content="text/html" charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Wasm Test</title>
+	</head>
+	<body>
+		<script>
+        	const importObject = {
+				imports: {
+					imported_func: (arg) => console.log(arg)
+				},
+			};
+
+			WebAssembly.instantiateStreaming(fetch("main.wasm"), importObject).then(
+				(obj) => obj.instance.exports.exported_func(),
+			);
+		</script>
+	</body>
+</html>
