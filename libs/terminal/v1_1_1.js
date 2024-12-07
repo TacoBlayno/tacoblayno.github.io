@@ -4,7 +4,7 @@ customElements.define("terminal-api", class extends HTMLElement {
 		return "v1.1.0";
 	}
 	
-	_format(val) {
+	#format(val) {
 		let tags = [];
 		val = val.split('\n');
 		val.forEach(val => {
@@ -18,14 +18,14 @@ customElements.define("terminal-api", class extends HTMLElement {
 		return tags;
 	}
 
-	_stdcss(el) {
-		el.style.color = this._color;
-		el.style.fontFamily = this._family;
-		el.style.fontStyle = this._style;
-		el.style.fontWeight = this._weight;
+	#stdcss(el) {
+		el.style.color = this.#color;
+		el.style.fontFamily = this.#family;
+		el.style.fontStyle = this.#style;
+		el.style.fontWeight = this.#weight;
 		el.style.textDecoration
-			= this._decoration;
-		el.style.background = this._bg;
+			= this.#decoration;
+		el.style.background = this.#bg;
 		return el;
 	}
 	
@@ -35,33 +35,33 @@ customElements.define("terminal-api", class extends HTMLElement {
 	}
 	
 	defaultText() {
-		this._color = this._el.style.color;
-		this._family = this._el.style.fontFamily;
-		this._style = this._el.style.fontStyle;
-		this._weight = this._el.style.fontWeight;
-		this._decoration = this._el.style.textDecoration;
-		this._bg = this._el.style.background;
+		this.#color = this.#el.style.color;
+		this.#family = this.#el.style.fontFamily;
+		this.#style = this.#el.style.fontStyle;
+		this.#weight = this.#el.style.fontWeight;
+		this.#decoration = this.#el.style.textDecoration;
+		this.#bg = this.#el.style.background;
 	}
 	
 	defaultStyle() {
-		this._el.style.background = "#333";
-		this._el.style.position = "absolute";
-		this._el.style.top = "2%";
-		this._el.style.left = "2%";
-		this._el.style.borderRadius = "5px";
-		this._el.style.width = "94%";
-		this._el.style.height = "94%";
-		this._el.style.margin = "2%";
-		this._el.style.padding = "1em";
-		this._el.style.boxSizing = "border-box";
-		this._el.style.color = "#fff";
-		this._el.style.overflow = "scroll";
+		this.#el.style.background = "#333";
+		this.#el.style.position = "absolute";
+		this.#el.style.top = "2%";
+		this.#el.style.left = "2%";
+		this.#el.style.borderRadius = "5px";
+		this.#el.style.width = "94%";
+		this.#el.style.height = "94%";
+		this.#el.style.margin = "2%";
+		this.#el.style.padding = "1em";
+		this.#el.style.boxSizing = "border-box";
+		this.#el.style.color = "#fff";
+		this.#el.style.overflow = "scroll";
 	}
 	
 	read(terminating=13) {
 		let fooEl = document.createElement("span");
 		let barEl = document.createElement("input");
-		barEl = this._stdcss(barEl);
+		barEl = this.#stdcss(barEl);
 		
 		barEl.style.background = "none";
 		barEl.style.outline = "none";
@@ -72,18 +72,18 @@ customElements.define("terminal-api", class extends HTMLElement {
 		barEl.style.padding = "inherit";
 
 		fooEl.appendChild(barEl);
-		this._el.appendChild(fooEl);
+		this.#el.appendChild(fooEl);
 
 		barEl.focus();
 		
 		return new Promise(resolve => {
 			barEl.addEventListener("keyup", (event) => {
 				if (event.keyCode != terminating) return;
-				this._input = barEl.value;
+				this.#input = barEl.value;
 				barEl.remove();
-				fooEl = this._stdcss(fooEl);
-				fooEl.textContent = this._input;
-				this._el
+				fooEl = this.#stdcss(fooEl);
+				fooEl.textContent = this.#input;
+				this.#el
 					.appendChild
 					(document
 					.createElement("br"));
@@ -96,7 +96,7 @@ customElements.define("terminal-api", class extends HTMLElement {
 		let fooEl = document.createElement("span");
 		let barEl = document.createElement("input");
 		
-		barEl = this._stdcss(barEl);
+		barEl = this.#stdcss(barEl);
 		
 		barEl.style.background = "none";
 		barEl.style.outline = "none";
@@ -107,38 +107,38 @@ customElements.define("terminal-api", class extends HTMLElement {
 		barEl.style.padding = "inherit";
 		
 		fooEl.appendChild(barEl);
-		this._el.appendChild(fooEl);
+		this.#el.appendChild(fooEl);
 		
 		barEl.focus();
 
 		return new Promise(resolve => {
 			barEl.addEventListener("keyup", (event) => {
 			if (event.keyCode != terminating) return;
-			this._input = barEl.value;
+			this.#input = barEl.value;
 			barEl.remove();
-			fooEl = this._stdcss(fooEl);
-			fooEl.textContent = this._input;
-			this._el
+			fooEl = this.#stdcss(fooEl);
+			fooEl.textContent = this.#input;
+			this.#el
 				.appendChild
 				(document
 				.createElement("br"));
 			terminating = "";
-			for (let i = 0; i < this._input.length; i++) {
-				switch (this._input[i]) {
+			for (let i = 0; i < this.#input.length; i++) {
+				switch (this.#input[i]) {
 					case '\\':
 						i++;
-						switch (this._input[i]) {
+						switch (this.#input[i]) {
 							case 'n':
 								terminating += '\n';
 								break;
-							default: terminating += '\\' + this._input[i];
+							default: terminating += '\\' + this.#input[i];
 						}
 						
 						break;
-					default: terminating += this._input[i]
+					default: terminating += this.#input[i]
 				}
 			}
-			this._input = terminating;
+			this.#input = terminating;
 			resolve();
 			});
 		});
@@ -148,7 +148,7 @@ customElements.define("terminal-api", class extends HTMLElement {
 		let fooEl = document.createElement("span");
 		let barEl = document.createElement("input");
 		
-		barEl = this._stdcss(barEl);
+		barEl = this.#stdcss(barEl);
 		
 		barEl.style.background = "none";
 		barEl.style.outline = "none";
@@ -159,17 +159,17 @@ customElements.define("terminal-api", class extends HTMLElement {
 		barEl.style.padding = "inherit";
 
 		fooEl.appendChild(barEl);
-		this._el.appendChild(fooEl);
+		this.#el.appendChild(fooEl);
 		
 		barEl.focus();
 		
 		return new Promise(resolve => {
 			barEl.addEventListener("keyup", (event) => {
-			this._input = barEl.value;
+			this.#input = barEl.value;
 			barEl.remove();
-			fooEl = this._stdcss(fooEl);
-			fooEl.textContent = this._input;
-			this._el
+			fooEl = this.#stdcss(fooEl);
+			fooEl.textContent = this.#input;
+			this.#el
 				.appendChild
 				(document
 				.createElement("br"));
@@ -178,20 +178,20 @@ customElements.define("terminal-api", class extends HTMLElement {
 		});
 	}
 	
-	get input() { return this._input; }
+	get input() { return this.#input; }
 
 	print(val) {
 		let fooEl = document.createElement("span");
 		fooEl.textContent = val;
-		fooEl = this._stdcss(fooEl);
-		this._el.appendChild(fooEl);
+		fooEl = this.#stdcss(fooEl);
+		this.#el.appendChild(fooEl);
 	}
 	
 	printf(val) {
-		let tags = this._format(val);
+		let tags = this.#format(val);
 		tags.forEach(fooEl => {
-			this._stdcss(fooEl);
-			this._el
+			this.#stdcss(fooEl);
+			this.#el
 				.appendChild(fooEl);
 		});
 	}
@@ -199,83 +199,83 @@ customElements.define("terminal-api", class extends HTMLElement {
 	println(val) {
 		let fooEl = document.createElement("span");
 		fooEl.textContent = val;
-		fooEl = this._stdcss(fooEl);
-		this._el.appendChild(fooEl);
-		this._el
+		fooEl = this.#stdcss(fooEl);
+		this.#el.appendChild(fooEl);
+		this.#el
 			.appendChild
 			(document.createElement("br"));
 	}
 	
 	printlnf(val) {
-		let tags = this._format(val);
+		let tags = this.#format(val);
 		tags.forEach(fooEl => {
-			this._stdcss(fooEl);
-			this._el
+			this.#stdcss(fooEl);
+			this.#el
 				.appendChild(fooEl);
 		});
-		this._el.appendChild
+		this.#el.appendChild
 			(document.createElement("br"));
 	}
 	
 	ln() {
-		this._el.appendChild
+		this.#el.appendChild
 			(document.createElement("br"));
 	}
 
 	unprint() {
-		this._el.lastElementChild.remove();
+		this.#el.lastElementChild.remove();
 	}
 
 	clear() {
-		while (this._el.firstElementChild) this._el.firstElementChild.remove();
+		while (this.#el.firstElementChild) this.#el.firstElementChild.remove();
 	}
 	
-	set color(str = this._el.style.color) {
-		this._color = str;
+	set color(str = this.#el.style.color) {
+		this.#color = str;
 	}
 	
-	get color() { return this._color; }
+	get color() { return this.#color; }
 	
-	set bg(str = this._el.style.background) {
-		this._bg = str;
+	set bg(str = this.#el.style.background) {
+		this.#bg = str;
 	}
 	
-	get bg() { return this._bg; }
+	get bg() { return this.#bg; }
 	
-	set family(str = this._el.style.fontFamily) { this._family = str; }
+	set family(str = this.#el.style.fontFamily) { this.#family = str; }
 	
-	get family() { return this._family; }
+	get family() { return this.#family; }
 	
-	set style(str = this._el.style.fontStyle) {
-		this._style = str;
+	set style(str = this.#el.style.fontStyle) {
+		this.#style = str;
 	}
 	
-	get style() { return this._style; }
+	get style() { return this.#style; }
 	
-	set weight(str = this._el.style.fontWeight) {
-		this._weight = str;
+	set weight(str = this.#el.style.fontWeight) {
+		this.#weight = str;
 	}
 	
-	get weight() { return this._weight; }
+	get weight() { return this.#weight; }
 	
-	set decoration(str = this._el.textDecoration) {
-		this._decoration = str;
+	set decoration(str = this.#el.textDecoration) {
+		this.#decoration = str;
 	}
 	
-	get decoration() { return this._decoration; }
+	get decoration() { return this.#decoration; }
 
 	constructor() {
 		super();
 		this
-			._shadow
+			.#shadow
 				= this
 					.attachShadow
 						({
 							mode: "closed"
 						});
 						
-		this._el = document.createElement("div");
-		this._shadow.appendChild(this._el);
+		this.#el = document.createElement("div");
+		this.#shadow.appendChild(this.#el);
 
 		this.default();
 	}
