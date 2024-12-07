@@ -1,5 +1,15 @@
 "use strict";
 customElements.define("terminal-api", class extends HTMLElement {
+	#shadow;
+	#el;
+	#input;
+	#color;
+	#family;
+	#style;
+	#weight;
+	#decoration;
+	#bg;
+	
 	get version() {
 		return "v1.1.0";
 	}
